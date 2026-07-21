@@ -1,0 +1,62 @@
+// Schéma minimal — à faire évoluer avec Personne 2 (rôle Backend/API).
+// Sert de base aux modules "verificateur" et "payments" codés côté
+// Personne 3, en attendant le modèle de données définitif.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum StatutDossier {
+  DEMANDE
+  EN_ATTENTE_PAIEMENT
+  PAYE
+  EN_TRAITEMENT
+  DELIVRE
+  REJETE
+}
+
+enum TypeDocument {
+  AVI
+  ADL
+  CAMPUS_FRANCE
+  BOURSE
+}
+
+model Etudiant {
+  id        String    @id @default(uuid())
+  email     String    @unique
+  nomComplet String
+  createdAt DateTime  @default(now())
+  dossiers  Dossier[]
+}
+
+model Dossier {
+  id             String        @id @default(uuid())
+  // Référence publique utilisée par le Vérificateur : volontairement NON
+  // séquentielle (UUID tronqué) pour empêcher l'énumération (voir guide sécurité).
+  reference      String        @unique @default(uuid())
+  type           TypeDocument
+  statut         StatutDossier @default(DEMANDE)
+  dateCreation   DateTime      @default(now())
+  dateDelivrance DateTime?
+  etudiant       Etudiant      @relation(fields: [etudiantId], references: [id])
+  etudiantId     String
+  paiement       Paiement?
+}
+
+model Paiement {
+  id              String   @id @default(uuid())
+  montant         Int      // en centimes, jamais de float pour de l'argent
+  devise          String   @default("EUR")
+  provider        String   // "stripe" | "paypal" | "mobile_money"
+  providerRef     String   @unique // id de session Stripe, order PayPal, etc.
+  statut          String   @default("pending") // pending | paid | failed
+  dossier         Dossier  @relation(fields: [dossierId], references: [id])
+  dossierId       String   @unique
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
