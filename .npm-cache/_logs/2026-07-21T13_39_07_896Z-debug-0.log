@@ -1,0 +1,1429 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@11.9.0
+2 info using node@v24.14.0
+3 silly config load:file:C:\Program Files\nodejs\node_modules\npm\npmrc
+4 silly config load:file:C:\Users\Herman\Documents\Codex\2026-07-21\r-partition-des-t-ches-projet\api\.npmrc
+5 silly config load:file:C:\Users\Herman\.npmrc
+6 silly config load:file:C:\Users\Herman\AppData\Roaming\npm\etc\npmrc
+7 verbose title npm install prisma@6.19.2
+8 verbose argv "install" "--save-dev" "prisma@6.19.2"
+9 verbose logfile logs-max:10 dir:C:\Users\Herman\Documents\Codex\2026-07-21\r-partition-des-t-ches-projet\.npm-cache\_logs\2026-07-21T13_39_07_896Z-
+10 verbose logfile C:\Users\Herman\Documents\Codex\2026-07-21\r-partition-des-t-ches-projet\.npm-cache\_logs\2026-07-21T13_39_07_896Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:4496293888 maxSize:1124073472 maxEntrySize:562036736
+13 verbose shrinkwrap failed to load node_modules/.package-lock.json out of date, updated: node_modules
+14 silly idealTree buildDeps
+15 silly fetch manifest prisma@6.19.2
+16 silly packumentCache full:https://registry.npmjs.org/prisma cache-miss
+17 http cache https://registry.npmjs.org/prisma 213ms (cache hit)
+18 silly packumentCache full:https://registry.npmjs.org/prisma set size:43377330 disposed:false
+19 silly fetch manifest typescript@^5.7.3
+20 silly packumentCache full:https://registry.npmjs.org/typescript cache-miss
+21 http cache https://registry.npmjs.org/typescript 645ms (cache hit)
+22 silly packumentCache full:https://registry.npmjs.org/typescript set size:15460034 disposed:false
+23 silly placeDep ROOT prisma@6.19.2 REPLACE for: api@0.0.1 want: 6.19.2
+24 silly fetch manifest @prisma/config@6.19.2
+25 silly packumentCache full:https://registry.npmjs.org/@prisma%2fconfig cache-miss
+26 silly fetch manifest @prisma/engines@6.19.2
+27 silly packumentCache full:https://registry.npmjs.org/@prisma%2fengines cache-miss
+28 http fetch GET 200 https://registry.npmjs.org/@prisma%2fconfig 346ms (cache revalidated)
+29 silly packumentCache full:https://registry.npmjs.org/@prisma%2fconfig set size:3833258 disposed:false
+30 http fetch GET 200 https://registry.npmjs.org/@prisma%2fengines 473ms (cache revalidated)
+31 silly packumentCache full:https://registry.npmjs.org/@prisma%2fengines set size:21821130 disposed:false
+32 silly placeDep ROOT @prisma/config@6.19.2 OK for: prisma@6.19.2 want: 6.19.2
+33 silly placeDep ROOT @prisma/engines@6.19.2 OK for: prisma@6.19.2 want: 6.19.2
+34 silly fetch manifest c12@3.1.0
+35 silly packumentCache full:https://registry.npmjs.org/c12 cache-miss
+36 silly fetch manifest effect@3.18.4
+37 silly packumentCache full:https://registry.npmjs.org/effect cache-miss
+38 silly fetch manifest empathic@2.0.0
+39 silly packumentCache full:https://registry.npmjs.org/empathic cache-miss
+40 silly fetch manifest deepmerge-ts@7.1.5
+41 silly packumentCache full:https://registry.npmjs.org/deepmerge-ts cache-miss
+42 silly fetch manifest @prisma/debug@6.19.2
+43 silly packumentCache full:https://registry.npmjs.org/@prisma%2fdebug cache-miss
+44 silly fetch manifest @prisma/fetch-engine@6.19.2
+45 silly packumentCache full:https://registry.npmjs.org/@prisma%2ffetch-engine cache-miss
+46 silly fetch manifest @prisma/get-platform@6.19.2
+47 silly packumentCache full:https://registry.npmjs.org/@prisma%2fget-platform cache-miss
+48 silly fetch manifest @prisma/engines-version@7.1.1-3.c2990dca591cba766e3b7ef5d9e8a84796e47ab7
+49 silly packumentCache full:https://registry.npmjs.org/@prisma%2fengines-version cache-miss
+50 http fetch GET 200 https://registry.npmjs.org/c12 130ms (cache revalidated)
+51 silly packumentCache full:https://registry.npmjs.org/c12 set size:188644 disposed:false
+52 http fetch GET 200 https://registry.npmjs.org/empathic 132ms (cache revalidated)
+53 silly packumentCache full:https://registry.npmjs.org/empathic set size:20342 disposed:false
+54 http fetch GET 200 https://registry.npmjs.org/deepmerge-ts 333ms (cache revalidated)
+55 silly packumentCache full:https://registry.npmjs.org/deepmerge-ts set size:334522 disposed:false
+56 http fetch GET 200 https://registry.npmjs.org/effect 376ms (cache revalidated)
+57 silly packumentCache full:https://registry.npmjs.org/effect set size:10243978 disposed:false
+58 http fetch GET 200 https://registry.npmjs.org/@prisma%2fengines-version 590ms (cache revalidated)
+59 silly packumentCache full:https://registry.npmjs.org/@prisma%2fengines-version set size:9924230 disposed:false
+60 http fetch GET 200 https://registry.npmjs.org/@prisma%2fdebug 757ms (cache revalidated)
+61 silly packumentCache full:https://registry.npmjs.org/@prisma%2fdebug set size:28767164 disposed:false
+62 http fetch GET 200 https://registry.npmjs.org/@prisma%2fget-platform 1316ms (cache revalidated)
+63 silly packumentCache full:https://registry.npmjs.org/@prisma%2fget-platform set size:28454234 disposed:false
+64 http fetch GET 200 https://registry.npmjs.org/@prisma%2ffetch-engine 1979ms (cache revalidated)
+65 silly packumentCache full:https://registry.npmjs.org/@prisma%2ffetch-engine set size:32353873 disposed:false
+66 silly fetch manifest magicast@^0.3.5
+67 silly packumentCache full:https://registry.npmjs.org/magicast cache-miss
+68 http fetch GET 200 https://registry.npmjs.org/magicast 64ms (cache revalidated)
+69 silly packumentCache full:https://registry.npmjs.org/magicast set size:84158 disposed:false
+70 silly placeDep ROOT c12@3.1.0 OK for: @prisma/config@6.19.2 want: 3.1.0
+71 silly placeDep ROOT deepmerge-ts@7.1.5 OK for: @prisma/config@6.19.2 want: 7.1.5
+72 silly placeDep ROOT effect@3.18.4 OK for: @prisma/config@6.19.2 want: 3.18.4
+73 silly placeDep ROOT empathic@2.0.0 OK for: @prisma/config@6.19.2 want: 2.0.0
+74 silly fetch manifest rc9@^2.1.2
+75 silly packumentCache full:https://registry.npmjs.org/rc9 cache-miss
+76 silly fetch manifest defu@^6.1.4
+77 silly packumentCache full:https://registry.npmjs.org/defu cache-miss
+78 silly fetch manifest giget@^2.0.0
+79 silly packumentCache full:https://registry.npmjs.org/giget cache-miss
+80 silly fetch manifest ohash@^2.0.11
+81 silly packumentCache full:https://registry.npmjs.org/ohash cache-miss
+82 silly fetch manifest pathe@^2.0.3
+83 silly packumentCache full:https://registry.npmjs.org/pathe cache-miss
+84 silly fetch manifest dotenv@^16.6.1
+85 silly packumentCache full:https://registry.npmjs.org/dotenv cache-miss
+86 silly fetch manifest confbox@^0.2.2
+87 silly packumentCache full:https://registry.npmjs.org/confbox cache-miss
+88 silly fetch manifest exsolve@^1.0.7
+89 silly packumentCache full:https://registry.npmjs.org/exsolve cache-miss
+90 silly fetch manifest pkg-types@^2.2.0
+91 silly packumentCache full:https://registry.npmjs.org/pkg-types cache-miss
+92 silly fetch manifest perfect-debounce@^1.0.0
+93 silly packumentCache full:https://registry.npmjs.org/perfect-debounce cache-miss
+94 silly fetch manifest fast-check@^3.23.1
+95 silly packumentCache full:https://registry.npmjs.org/fast-check cache-miss
+96 silly fetch manifest @standard-schema/spec@^1.0.0
+97 silly packumentCache full:https://registry.npmjs.org/@standard-schema%2fspec cache-miss
+98 http fetch GET 200 https://registry.npmjs.org/defu 93ms (cache revalidated)
+99 silly packumentCache full:https://registry.npmjs.org/defu set size:87806 disposed:false
+100 http fetch GET 200 https://registry.npmjs.org/rc9 112ms (cache revalidated)
+101 silly packumentCache full:https://registry.npmjs.org/rc9 set size:62610 disposed:false
+102 http fetch GET 200 https://registry.npmjs.org/giget 114ms (cache revalidated)
+103 silly packumentCache full:https://registry.npmjs.org/giget set size:100226 disposed:false
+104 http fetch GET 200 https://registry.npmjs.org/perfect-debounce 112ms (cache revalidated)
+105 silly packumentCache full:https://registry.npmjs.org/perfect-debounce set size:28201 disposed:false
+106 http fetch GET 200 https://registry.npmjs.org/pathe 119ms (cache revalidated)
+107 silly packumentCache full:https://registry.npmjs.org/pathe set size:68788 disposed:false
+108 http fetch GET 200 https://registry.npmjs.org/confbox 121ms (cache revalidated)
+109 silly packumentCache full:https://registry.npmjs.org/confbox set size:44789 disposed:false
+110 http fetch GET 200 https://registry.npmjs.org/pkg-types 122ms (cache revalidated)
+111 silly packumentCache full:https://registry.npmjs.org/pkg-types set size:90685 disposed:false
+112 http fetch GET 200 https://registry.npmjs.org/ohash 135ms (cache revalidated)
+113 silly packumentCache full:https://registry.npmjs.org/ohash set size:69122 disposed:false
+114 http fetch GET 200 https://registry.npmjs.org/dotenv 239ms (cache revalidated)
+115 silly packumentCache full:https://registry.npmjs.org/dotenv set size:277802 disposed:false
+116 http fetch GET 200 https://registry.npmjs.org/exsolve 251ms (cache revalidated)
+117 silly packumentCache full:https://registry.npmjs.org/exsolve set size:58654 disposed:false
+118 http fetch GET 200 https://registry.npmjs.org/fast-check 253ms (cache revalidated)
+119 silly packumentCache full:https://registry.npmjs.org/fast-check set size:902374 disposed:false
+120 http fetch GET 200 https://registry.npmjs.org/@standard-schema%2fspec 275ms (cache revalidated)
+121 silly packumentCache full:https://registry.npmjs.org/@standard-schema%2fspec set size:27284 disposed:false
+122 silly placeDep ROOT @prisma/debug@6.19.2 OK for: @prisma/engines@6.19.2 want: 6.19.2
+123 silly placeDep ROOT @prisma/engines-version@7.1.1-3.c2990dca591cba766e3b7ef5d9e8a84796e47ab7 OK for: @prisma/engines@6.19.2 want: 7.1.1-3.c2990dca591cba766e3b7ef5d9e8a84796e47ab7
+124 silly placeDep ROOT @prisma/fetch-engine@6.19.2 OK for: @prisma/engines@6.19.2 want: 6.19.2
+125 silly placeDep ROOT @prisma/get-platform@6.19.2 OK for: @prisma/engines@6.19.2 want: 6.19.2
+126 silly placeDep ROOT confbox@0.2.4 OK for: c12@3.1.0 want: ^0.2.2
+127 silly placeDep ROOT defu@6.1.7 OK for: c12@3.1.0 want: ^6.1.4
+128 silly placeDep node_modules/c12 dotenv@16.6.1 OK for: c12@3.1.0 want: ^16.6.1
+129 silly placeDep ROOT exsolve@1.1.0 OK for: c12@3.1.0 want: ^1.0.7
+130 silly placeDep ROOT giget@2.0.0 OK for: c12@3.1.0 want: ^2.0.0
+131 silly placeDep ROOT ohash@2.0.11 OK for: c12@3.1.0 want: ^2.0.11
+132 silly placeDep ROOT pathe@2.0.3 OK for: c12@3.1.0 want: ^2.0.3
+133 silly placeDep ROOT perfect-debounce@1.0.0 OK for: c12@3.1.0 want: ^1.0.0
+134 silly placeDep ROOT pkg-types@2.3.1 OK for: c12@3.1.0 want: ^2.2.0
+135 silly placeDep ROOT rc9@2.1.2 OK for: c12@3.1.0 want: ^2.1.2
+136 silly fetch manifest nypm@^0.6.0
+137 silly packumentCache full:https://registry.npmjs.org/nypm cache-miss
+138 silly fetch manifest citty@^0.1.6
+139 silly packumentCache full:https://registry.npmjs.org/citty cache-miss
+140 silly fetch manifest consola@^3.4.0
+141 silly packumentCache full:https://registry.npmjs.org/consola cache-miss
+142 silly fetch manifest node-fetch-native@^1.6.6
+143 silly packumentCache full:https://registry.npmjs.org/node-fetch-native cache-miss
+144 silly fetch manifest destr@^2.0.3
+145 silly packumentCache full:https://registry.npmjs.org/destr cache-miss
+146 http fetch GET 200 https://registry.npmjs.org/destr 95ms (cache revalidated)
+147 silly packumentCache full:https://registry.npmjs.org/destr set size:65344 disposed:false
+148 http fetch GET 200 https://registry.npmjs.org/citty 102ms (cache miss)
+149 silly packumentCache full:https://registry.npmjs.org/citty set size:undefined disposed:false
+150 http fetch GET 200 https://registry.npmjs.org/nypm 106ms (cache miss)
+151 silly packumentCache full:https://registry.npmjs.org/nypm set size:undefined disposed:false
+152 http fetch GET 200 https://registry.npmjs.org/consola 202ms (cache miss)
+153 silly packumentCache full:https://registry.npmjs.org/consola set size:undefined disposed:false
+154 http fetch GET 200 https://registry.npmjs.org/node-fetch-native 648ms (cache miss)
+155 silly packumentCache full:https://registry.npmjs.org/node-fetch-native set size:undefined disposed:false
+156 silly placeDep ROOT @standard-schema/spec@1.1.0 OK for: effect@3.18.4 want: ^1.0.0
+157 silly placeDep ROOT fast-check@3.23.2 OK for: effect@3.18.4 want: ^3.23.1
+158 silly fetch manifest pure-rand@^6.1.0
+159 silly packumentCache full:https://registry.npmjs.org/pure-rand cache-miss
+160 http fetch GET 200 https://registry.npmjs.org/pure-rand 62ms (cache revalidated)
+161 silly packumentCache full:https://registry.npmjs.org/pure-rand set size:186002 disposed:false
+162 silly placeDep node_modules/fast-check pure-rand@6.1.0 OK for: fast-check@3.23.2 want: ^6.1.0
+163 silly placeDep ROOT citty@0.1.6 OK for: giget@2.0.0 want: ^0.1.6
+164 silly placeDep ROOT consola@3.4.2 OK for: giget@2.0.0 want: ^3.4.0
+165 silly placeDep ROOT node-fetch-native@1.6.7 OK for: giget@2.0.0 want: ^1.6.6
+166 silly placeDep ROOT nypm@0.6.8 OK for: giget@2.0.0 want: ^0.6.0
+167 silly fetch manifest consola@^3.2.3
+168 silly packumentCache full:https://registry.npmjs.org/consola cache-miss
+169 silly fetch manifest citty@^0.2.2
+170 silly packumentCache full:https://registry.npmjs.org/citty cache-miss
+171 silly fetch manifest tinyexec@^1.2.4
+172 silly packumentCache full:https://registry.npmjs.org/tinyexec cache-miss
+173 http cache https://registry.npmjs.org/consola 17ms (cache hit)
+174 silly packumentCache full:https://registry.npmjs.org/consola set size:324648 disposed:false
+175 http cache https://registry.npmjs.org/citty 21ms (cache hit)
+176 silly packumentCache full:https://registry.npmjs.org/citty set size:38582 disposed:false
+177 http fetch GET 200 https://registry.npmjs.org/tinyexec 63ms (cache miss)
+178 silly packumentCache full:https://registry.npmjs.org/tinyexec set size:undefined disposed:false
+179 silly placeDep node_modules/nypm citty@0.2.2 OK for: nypm@0.6.8 want: ^0.2.2
+180 silly placeDep ROOT tinyexec@1.2.4 OK for: nypm@0.6.8 want: ^1.2.4
+181 silly placeDep ROOT destr@2.0.5 OK for: rc9@2.1.2 want: ^2.0.3
+182 silly reify mark retired [
+182 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\aws-ssl-profiles'
+182 silly reify ]
+183 silly reify mark retired [
+183 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\better-result'
+183 silly reify ]
+184 silly reify mark retired [
+184 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\c12'
+184 silly reify ]
+185 silly reify mark retired [
+185 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\classnames'
+185 silly reify ]
+186 silly reify mark retired [
+186 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\d3-array'
+186 silly reify ]
+187 silly reify mark retired [
+187 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\d3-color'
+187 silly reify ]
+188 silly reify mark retired [
+188 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\d3-geo'
+188 silly reify ]
+189 silly reify mark retired [
+189 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\d3-delaunay'
+189 silly reify ]
+190 silly reify mark retired [
+190 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\d3-format'
+190 silly reify ]
+191 silly reify mark retired [
+191 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\d3-interpolate'
+191 silly reify ]
+192 silly reify mark retired [
+192 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\csstype'
+192 silly reify ]
+193 silly reify mark retired [
+193 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\d3-time'
+193 silly reify ]
+194 silly reify mark retired [
+194 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\d3-shape'
+194 silly reify ]
+195 silly reify mark retired [
+195 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\d3-time-format'
+195 silly reify ]
+196 silly reify mark retired [
+196 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\d3-path'
+196 silly reify ]
+197 silly reify mark retired [
+197 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\d3-scale'
+197 silly reify ]
+198 silly reify mark retired [
+198 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\denque'
+198 silly reify ]
+199 silly reify mark retired [
+199 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\delaunator'
+199 silly reify ]
+200 silly reify mark retired [
+200 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\effect'
+200 silly reify ]
+201 silly reify mark retired [
+201 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\elkjs'
+201 silly reify ]
+202 silly reify mark retired [
+202 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\env-paths'
+202 silly reify ]
+203 silly reify mark retired [
+203 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\fast-decode-uri-component'
+203 silly reify ]
+204 silly reify mark retired [
+204 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\fast-querystring'
+204 silly reify ]
+205 silly reify mark retired [
+205 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\find-my-way'
+205 silly reify ]
+206 silly reify mark retired [
+206 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\generate-function'
+206 silly reify ]
+207 silly reify mark retired [
+207 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\get-port-please'
+207 silly reify ]
+208 silly reify mark retired [
+208 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\giget',
+208 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.bin\\giget',
+208 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.bin\\giget.cmd',
+208 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.bin\\giget.ps1'
+208 silly reify ]
+209 silly reify mark retired [
+209 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\graphmatch'
+209 silly reify ]
+210 silly reify mark retired [
+210 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\grammex'
+210 silly reify ]
+211 silly reify mark retired [
+211 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\internmap'
+211 silly reify ]
+212 silly reify mark retired [
+212 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\is-property'
+212 silly reify ]
+213 silly reify mark retired [
+213 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\lru.min'
+213 silly reify ]
+214 silly reify mark retired [
+214 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\long'
+214 silly reify ]
+215 silly reify mark retired [
+215 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\mysql2'
+215 silly reify ]
+216 silly reify mark retired [
+216 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\named-placeholders'
+216 silly reify ]
+217 silly reify mark retired [
+217 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\perfect-debounce'
+217 silly reify ]
+218 silly reify mark retired [
+218 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\postgres'
+218 silly reify ]
+219 silly reify mark retired [
+219 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\prisma',
+219 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.bin\\prisma',
+219 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.bin\\prisma.cmd',
+219 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.bin\\prisma.ps1'
+219 silly reify ]
+220 silly reify mark retired [
+220 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\proper-lockfile'
+220 silly reify ]
+221 silly reify mark retired [
+221 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\rc9'
+221 silly reify ]
+222 silly reify mark retired [
+222 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\react'
+222 silly reify ]
+223 silly reify mark retired [
+223 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\react-dom'
+223 silly reify ]
+224 silly reify mark retired [
+224 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\remeda'
+224 silly reify ]
+225 silly reify mark retired [
+225 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\ret'
+225 silly reify ]
+226 silly reify mark retired [
+226 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\retry'
+226 silly reify ]
+227 silly reify mark retired [
+227 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\robust-predicates'
+227 silly reify ]
+228 silly reify mark retired [
+228 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\safe-regex2',
+228 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.bin\\safe-regex2',
+228 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.bin\\safe-regex2.cmd',
+228 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.bin\\safe-regex2.ps1'
+228 silly reify ]
+229 silly reify mark retired [
+229 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\scheduler'
+229 silly reify ]
+230 silly reify mark retired [
+230 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\seq-queue'
+230 silly reify ]
+231 silly reify mark retired [
+231 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\sqlstring'
+231 silly reify ]
+232 silly reify mark retired [
+232 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\std-env'
+232 silly reify ]
+233 silly reify mark retired [
+233 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\valibot'
+233 silly reify ]
+234 silly reify mark retired [
+234 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\zeptomatch'
+234 silly reify ]
+235 silly reify mark retired [
+235 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@electric-sql\\pglite'
+235 silly reify ]
+236 silly reify mark retired [
+236 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@electric-sql\\pglite-tools'
+236 silly reify ]
+237 silly reify mark retired [
+237 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@electric-sql\\pglite-socket',
+237 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.bin\\pglite-server',
+237 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.bin\\pglite-server.cmd',
+237 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.bin\\pglite-server.ps1'
+237 silly reify ]
+238 silly reify mark retired [
+238 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@prisma\\debug'
+238 silly reify ]
+239 silly reify mark retired [
+239 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@prisma\\engines'
+239 silly reify ]
+240 silly reify mark retired [
+240 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@prisma\\dev'
+240 silly reify ]
+241 silly reify mark retired [
+241 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@prisma\\engines-version'
+241 silly reify ]
+242 silly reify mark retired [
+242 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@prisma\\get-platform'
+242 silly reify ]
+243 silly reify mark retired [
+243 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@prisma\\config'
+243 silly reify ]
+244 silly reify mark retired [
+244 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@prisma\\fetch-engine'
+244 silly reify ]
+245 silly reify mark retired [
+245 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@prisma\\studio-core'
+245 silly reify ]
+246 silly reify mark retired [
+246 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@prisma\\query-plan-executor'
+246 silly reify ]
+247 silly reify mark retired [
+247 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@prisma\\streams-local'
+247 silly reify ]
+248 silly reify mark retired [
+248 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@radix-ui\\react-primitive'
+248 silly reify ]
+249 silly reify mark retired [
+249 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@radix-ui\\primitive'
+249 silly reify ]
+250 silly reify mark retired [
+250 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@radix-ui\\react-toggle'
+250 silly reify ]
+251 silly reify mark retired [
+251 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@radix-ui\\react-slot'
+251 silly reify ]
+252 silly reify mark retired [
+252 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@radix-ui\\react-compose-refs'
+252 silly reify ]
+253 silly reify mark retired [
+253 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@radix-ui\\react-use-layout-effect'
+253 silly reify ]
+254 silly reify mark retired [
+254 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@radix-ui\\react-use-controllable-state'
+254 silly reify ]
+255 silly reify mark retired [
+255 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@radix-ui\\react-use-effect-event'
+255 silly reify ]
+256 silly reify mark retired [
+256 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@types\\d3-color'
+256 silly reify ]
+257 silly reify mark retired [
+257 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@types\\d3-format'
+257 silly reify ]
+258 silly reify mark retired [
+258 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@types\\d3-array'
+258 silly reify ]
+259 silly reify mark retired [
+259 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@types\\d3-delaunay'
+259 silly reify ]
+260 silly reify mark retired [
+260 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@types\\d3-geo'
+260 silly reify ]
+261 silly reify mark retired [
+261 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@types\\d3-interpolate'
+261 silly reify ]
+262 silly reify mark retired [
+262 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@types\\d3-path'
+262 silly reify ]
+263 silly reify mark retired [
+263 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@types\\d3-scale'
+263 silly reify ]
+264 silly reify mark retired [
+264 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@types\\d3-time-format'
+264 silly reify ]
+265 silly reify mark retired [
+265 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@types\\d3-shape'
+265 silly reify ]
+266 silly reify mark retired [
+266 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@types\\d3-time'
+266 silly reify ]
+267 silly reify mark retired [
+267 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@types\\geojson'
+267 silly reify ]
+268 silly reify mark retired [
+268 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@types\\lodash'
+268 silly reify ]
+269 silly reify mark retired [
+269 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@types\\react'
+269 silly reify ]
+270 silly reify mark retired [
+270 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@visx\\event'
+270 silly reify ]
+271 silly reify mark retired [
+271 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@visx\\curve'
+271 silly reify ]
+272 silly reify mark retired [
+272 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@visx\\group'
+272 silly reify ]
+273 silly reify mark retired [
+273 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@visx\\grid'
+273 silly reify ]
+274 silly reify mark retired [
+274 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@visx\\point'
+274 silly reify ]
+275 silly reify mark retired [
+275 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@visx\\vendor'
+275 silly reify ]
+276 silly reify mark retired [
+276 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@visx\\responsive'
+276 silly reify ]
+277 silly reify mark retired [
+277 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@visx\\shape'
+277 silly reify ]
+278 silly reify mark retired [
+278 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@visx\\scale'
+278 silly reify ]
+279 silly reify moves {
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\aws-ssl-profiles': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.aws-ssl-profiles-tfDdtnTW',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\better-result': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.better-result-WPLNt1em',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\c12': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.c12-6SdVrFcZ',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\classnames': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.classnames-gkcpLoO5',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\d3-array': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.d3-array-r6CylPH8',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\d3-color': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.d3-color-4EmmIuzw',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\d3-geo': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.d3-geo-meWYiklr',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\d3-delaunay': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.d3-delaunay-VF6rNbQX',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\d3-format': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.d3-format-wJZTodhT',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\d3-interpolate': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.d3-interpolate-2D1cuzpI',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\csstype': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.csstype-eOnkewX3',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\d3-time': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.d3-time-23XzHyYi',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\d3-shape': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.d3-shape-ovfgh9Nt',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\d3-time-format': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.d3-time-format-2X7j0RCZ',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\d3-path': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.d3-path-JeLcU8KG',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\d3-scale': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.d3-scale-KJuzkpqO',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\denque': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.denque-QwihQIdI',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\delaunator': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.delaunator-0YrkqHYn',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\effect': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.effect-yYvtPANc',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\elkjs': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.elkjs-iQRVKhk0',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\env-paths': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.env-paths-DT6uncRB',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\fast-decode-uri-component': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.fast-decode-uri-component-vUAbAVXI',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\fast-querystring': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.fast-querystring-yuGhg5vK',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\find-my-way': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.find-my-way-zwQLaMZt',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\generate-function': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.generate-function-hi8SE6xP',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\get-port-please': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.get-port-please-2rEn3TQo',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\giget': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.giget-XLYPEY6n',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.bin\\giget': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.bin\\.giget-wY1utSqB',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.bin\\giget.cmd': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.bin\\.giget.cmd-Yyppzm3P',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.bin\\giget.ps1': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.bin\\.giget.ps1-tpHHp0IR',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\graphmatch': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.graphmatch-NU1vq7VZ',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\grammex': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.grammex-vqCqH24f',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\internmap': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.internmap-i7r1MuoM',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\is-property': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.is-property-xk9bAHAP',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\lru.min': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.lru.min-98E1IKoW',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\long': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.long-2SYO82fb',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\mysql2': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.mysql2-7y7rJpCv',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\named-placeholders': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.named-placeholders-UNq5aAQl',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\perfect-debounce': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.perfect-debounce-o1lYnJb6',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\postgres': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.postgres-4KpiO6oJ',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\prisma': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.prisma-dxmoN8vP',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.bin\\prisma': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.bin\\.prisma-xKJ4jYdx',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.bin\\prisma.cmd': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.bin\\.prisma.cmd-ox1YM8rs',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.bin\\prisma.ps1': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.bin\\.prisma.ps1-NHnE1MRS',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\proper-lockfile': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.proper-lockfile-uCEZaLAo',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\rc9': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.rc9-LQS9Xh3w',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\react': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.react-Ov0Ao5GE',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\react-dom': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.react-dom-wnxRNHYO',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\remeda': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.remeda-EXgdAZDb',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\ret': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.ret-cEgce4sT',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\retry': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.retry-U8DrbpBm',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\robust-predicates': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.robust-predicates-mIZF394w',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\safe-regex2': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.safe-regex2-SEUYJkg5',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.bin\\safe-regex2': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.bin\\.safe-regex2-NHb0tJtF',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.bin\\safe-regex2.cmd': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.bin\\.safe-regex2.cmd-5LXicUXw',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.bin\\safe-regex2.ps1': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.bin\\.safe-regex2.ps1-Fk6PtnmD',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\scheduler': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.scheduler-WVDIJbBv',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\seq-queue': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.seq-queue-ZP4vJCtU',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\sqlstring': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.sqlstring-tg7de3uq',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\std-env': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.std-env-ylh6PPkE',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\valibot': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.valibot-G76y8O2E',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\zeptomatch': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.zeptomatch-u0NEzB7P',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@electric-sql\\pglite': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@electric-sql\\.pglite-TAU6TGEk',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@electric-sql\\pglite-tools': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@electric-sql\\.pglite-tools-sBGOEO2z',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@electric-sql\\pglite-socket': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@electric-sql\\.pglite-socket-oOLIsZ9A',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.bin\\pglite-server': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.bin\\.pglite-server-Fkx5lMNg',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.bin\\pglite-server.cmd': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.bin\\.pglite-server.cmd-2hEkMNTB',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.bin\\pglite-server.ps1': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\.bin\\.pglite-server.ps1-WpsjU8wv',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@prisma\\debug': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@prisma\\.debug-PQ5GaEi7',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@prisma\\engines': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@prisma\\.engines-KsJuVJxD',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@prisma\\dev': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@prisma\\.dev-GMP6KiR8',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@prisma\\engines-version': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@prisma\\.engines-version-XoFz6OSB',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@prisma\\get-platform': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@prisma\\.get-platform-WzZtGgLp',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@prisma\\config': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@prisma\\.config-TJNO9hAZ',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@prisma\\fetch-engine': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@prisma\\.fetch-engine-DvLR6lCd',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@prisma\\studio-core': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@prisma\\.studio-core-TC55Znbb',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@prisma\\query-plan-executor': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@prisma\\.query-plan-executor-5ANwPo1o',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@prisma\\streams-local': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@prisma\\.streams-local-YSpE1XH8',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@radix-ui\\react-primitive': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@radix-ui\\.react-primitive-qsBqpYnX',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@radix-ui\\primitive': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@radix-ui\\.primitive-zJpiCEe1',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@radix-ui\\react-toggle': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@radix-ui\\.react-toggle-NHQWnETT',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@radix-ui\\react-slot': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@radix-ui\\.react-slot-6ABUMvjT',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@radix-ui\\react-compose-refs': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@radix-ui\\.react-compose-refs-AiAjs7oc',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@radix-ui\\react-use-layout-effect': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@radix-ui\\.react-use-layout-effect-d164vWkb',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@radix-ui\\react-use-controllable-state': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@radix-ui\\.react-use-controllable-state-K67PKtWI',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@radix-ui\\react-use-effect-event': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@radix-ui\\.react-use-effect-event-RqVv6tJM',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@types\\d3-color': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@types\\.d3-color-vXvfDnYY',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@types\\d3-format': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@types\\.d3-format-2PMZc75x',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@types\\d3-array': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@types\\.d3-array-WHfb4J3V',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@types\\d3-delaunay': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@types\\.d3-delaunay-VzSSrm0e',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@types\\d3-geo': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@types\\.d3-geo-fhIKhsoH',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@types\\d3-interpolate': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@types\\.d3-interpolate-kS4Y5Po5',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@types\\d3-path': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@types\\.d3-path-g71ClCtX',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@types\\d3-scale': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@types\\.d3-scale-7lXStuk8',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@types\\d3-time-format': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@types\\.d3-time-format-Fk69Oyw7',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@types\\d3-shape': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@types\\.d3-shape-sS9EkRxa',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@types\\d3-time': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@types\\.d3-time-BGH4kcMs',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@types\\geojson': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@types\\.geojson-3DUuM7jz',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@types\\lodash': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@types\\.lodash-H2Ukgao8',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@types\\react': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@types\\.react-56o7c1Ji',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@visx\\event': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@visx\\.event-heQQAGcs',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@visx\\curve': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@visx\\.curve-W9O0ZY8l',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@visx\\group': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@visx\\.group-ccb0iiCk',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@visx\\grid': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@visx\\.grid-2Lu7GW8v',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@visx\\point': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@visx\\.point-tzUrBHKn',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@visx\\vendor': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@visx\\.vendor-rySXj4YY',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@visx\\responsive': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@visx\\.responsive-1IOceTS4',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@visx\\shape': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@visx\\.shape-nwpuNjQ3',
+279 silly reify   'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@visx\\scale': 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\@visx\\.scale-h5sY2Xax'
+279 silly reify }
+280 silly audit bulk request {
+280 silly audit   '@angular-devkit/core': [ '19.2.27', '19.2.24' ],
+280 silly audit   ajv: [ '8.18.0', '8.20.0', '6.15.0' ],
+280 silly audit   'json-schema-traverse': [ '1.0.0', '0.4.1' ],
+280 silly audit   rxjs: [ '7.8.1', '7.8.2' ],
+280 silly audit   '@angular-devkit/schematics': [ '19.2.27', '19.2.24' ],
+280 silly audit   '@angular-devkit/schematics-cli': [ '19.2.27' ],
+280 silly audit   '@inquirer/prompts': [ '7.3.2', '7.10.1' ],
+280 silly audit   '@babel/code-frame': [ '7.29.7' ],
+280 silly audit   '@babel/compat-data': [ '7.29.7' ],
+280 silly audit   '@babel/core': [ '7.29.7' ],
+280 silly audit   semver: [ '6.3.1', '7.8.5' ],
+280 silly audit   '@babel/generator': [ '7.29.7' ],
+280 silly audit   '@babel/helper-compilation-targets': [ '7.29.7' ],
+280 silly audit   '@babel/helper-globals': [ '7.29.7' ],
+280 silly audit   '@babel/helper-module-imports': [ '7.29.7' ],
+280 silly audit   '@babel/helper-module-transforms': [ '7.29.7' ],
+280 silly audit   '@babel/helper-plugin-utils': [ '7.29.7' ],
+280 silly audit   '@babel/helper-string-parser': [ '7.29.7' ],
+280 silly audit   '@babel/helper-validator-identifier': [ '7.29.7' ],
+280 silly audit   '@babel/helper-validator-option': [ '7.29.7' ],
+280 silly audit   '@babel/helpers': [ '7.29.7' ],
+280 silly audit   '@babel/parser': [ '7.29.7' ],
+280 silly audit   '@babel/plugin-syntax-async-generators': [ '7.8.4' ],
+280 silly audit   '@babel/plugin-syntax-bigint': [ '7.8.3' ],
+280 silly audit   '@babel/plugin-syntax-class-properties': [ '7.12.13' ],
+280 silly audit   '@babel/plugin-syntax-class-static-block': [ '7.14.5' ],
+280 silly audit   '@babel/plugin-syntax-import-attributes': [ '7.29.7' ],
+280 silly audit   '@babel/plugin-syntax-import-meta': [ '7.10.4' ],
+280 silly audit   '@babel/plugin-syntax-json-strings': [ '7.8.3' ],
+280 silly audit   '@babel/plugin-syntax-jsx': [ '7.29.7' ],
+280 silly audit   '@babel/plugin-syntax-logical-assignment-operators': [ '7.10.4' ],
+280 silly audit   '@babel/plugin-syntax-nullish-coalescing-operator': [ '7.8.3' ],
+280 silly audit   '@babel/plugin-syntax-numeric-separator': [ '7.10.4' ],
+280 silly audit   '@babel/plugin-syntax-object-rest-spread': [ '7.8.3' ],
+280 silly audit   '@babel/plugin-syntax-optional-catch-binding': [ '7.8.3' ],
+280 silly audit   '@babel/plugin-syntax-optional-chaining': [ '7.8.3' ],
+280 silly audit   '@babel/plugin-syntax-private-property-in-object': [ '7.14.5' ],
+280 silly audit   '@babel/plugin-syntax-top-level-await': [ '7.14.5' ],
+280 silly audit   '@babel/plugin-syntax-typescript': [ '7.29.7' ],
+280 silly audit   '@babel/template': [ '7.29.7' ],
+280 silly audit   '@babel/traverse': [ '7.29.7' ],
+280 silly audit   '@babel/types': [ '7.29.7' ],
+280 silly audit   '@bcoe/v8-coverage': [ '0.2.3' ],
+280 silly audit   '@borewit/text-codec': [ '0.2.2' ],
+280 silly audit   '@colors/colors': [ '1.5.0' ],
+280 silly audit   '@cspotcode/source-map-support': [ '0.8.1' ],
+280 silly audit   '@jridgewell/trace-mapping': [ '0.3.9', '0.3.31' ],
+280 silly audit   '@emnapi/core': [ '1.10.0' ],
+280 silly audit   '@emnapi/runtime': [ '1.10.0' ],
+280 silly audit   '@emnapi/wasi-threads': [ '1.2.1' ],
+280 silly audit   '@eslint-community/eslint-utils': [ '4.9.1' ],
+280 silly audit   'eslint-visitor-keys': [ '3.4.3', '5.0.1', '4.2.1' ],
+280 silly audit   '@eslint-community/regexpp': [ '4.12.2' ],
+280 silly audit   '@eslint/config-array': [ '0.21.2' ],
+280 silly audit   '@eslint/config-helpers': [ '0.4.2' ],
+280 silly audit   '@eslint/core': [ '0.17.0' ],
+280 silly audit   '@eslint/eslintrc': [ '3.3.6' ],
+280 silly audit   globals: [ '14.0.0', '17.7.0' ],
+280 silly audit   '@eslint/js': [ '9.39.5' ],
+280 silly audit   '@eslint/object-schema': [ '2.1.7' ],
+280 silly audit   '@eslint/plugin-kit': [ '0.4.1' ],
+280 silly audit   '@humanfs/core': [ '0.19.2' ],
+280 silly audit   '@humanfs/node': [ '0.16.8' ],
+280 silly audit   '@humanfs/types': [ '0.15.0' ],
+280 silly audit   '@humanwhocodes/module-importer': [ '1.0.1' ],
+280 silly audit   '@humanwhocodes/retry': [ '0.4.3' ],
+280 silly audit   '@inquirer/ansi': [ '1.0.2' ],
+280 silly audit   '@inquirer/checkbox': [ '4.3.2' ],
+280 silly audit   '@inquirer/confirm': [ '5.1.21' ],
+280 silly audit   '@inquirer/core': [ '10.3.2' ],
+280 silly audit   '@inquirer/editor': [ '4.2.23' ],
+280 silly audit   '@inquirer/expand': [ '4.0.23' ],
+280 silly audit   '@inquirer/external-editor': [ '1.0.3' ],
+280 silly audit   '@inquirer/figures': [ '1.0.15' ],
+280 silly audit   '@inquirer/input': [ '4.3.1' ],
+280 silly audit   '@inquirer/number': [ '3.0.23' ],
+280 silly audit   '@inquirer/password': [ '4.0.23' ],
+280 silly audit   '@inquirer/rawlist': [ '4.1.11' ],
+280 silly audit   '@inquirer/search': [ '3.2.2' ],
+280 silly audit   '@inquirer/select': [ '4.4.2' ],
+280 silly audit   '@inquirer/type': [ '3.0.10' ],
+280 silly audit   '@isaacs/cliui': [ '8.0.2' ],
+280 silly audit   'ansi-regex': [ '6.2.2', '5.0.1' ],
+280 silly audit   'ansi-styles': [ '6.2.3', '4.3.0', '5.2.0' ],
+280 silly audit   'emoji-regex': [ '9.2.2', '8.0.0' ],
+280 silly audit   'string-width': [ '5.1.2', '4.2.3' ],
+280 silly audit   'strip-ansi': [ '7.2.0', '6.0.1' ],
+280 silly audit   'wrap-ansi': [ '8.1.0', '7.0.0', '6.2.0' ],
+280 silly audit   '@istanbuljs/load-nyc-config': [ '1.1.0' ],
+280 silly audit   argparse: [ '1.0.10', '2.0.1' ],
+280 silly audit   'find-up': [ '4.1.0', '5.0.0' ],
+280 silly audit   'js-yaml': [ '3.15.0', '5.2.1', '4.3.0' ],
+280 silly audit   'locate-path': [ '5.0.0', '6.0.0' ],
+280 silly audit   'p-limit': [ '2.3.0', '3.1.0' ],
+280 silly audit   'p-locate': [ '4.1.0', '5.0.0' ],
+280 silly audit   'resolve-from': [ '5.0.0', '4.0.0' ],
+280 silly audit   '@istanbuljs/schema': [ '0.1.6' ],
+280 silly audit   '@jest/console': [ '30.4.1' ],
+280 silly audit   '@jest/core': [ '30.4.2' ],
+280 silly audit   '@jest/diff-sequences': [ '30.4.0' ],
+280 silly audit   '@jest/environment': [ '30.4.1' ],
+280 silly audit   '@jest/expect': [ '30.4.1' ],
+280 silly audit   '@jest/expect-utils': [ '30.4.1' ],
+280 silly audit   '@jest/fake-timers': [ '30.4.1' ],
+280 silly audit   '@jest/get-type': [ '30.1.0' ],
+280 silly audit   '@jest/globals': [ '30.4.1' ],
+280 silly audit   '@jest/pattern': [ '30.4.0' ],
+280 silly audit   '@jest/reporters': [ '30.4.1' ],
+280 silly audit   'brace-expansion': [ '2.1.2', '5.0.7', '1.1.16' ],
+280 silly audit   glob: [ '10.5.0', '13.0.6', '7.2.3' ],
+280 silly audit   'lru-cache': [ '10.4.3', '5.1.1', '11.5.2' ],
+280 silly audit   minimatch: [ '9.0.9', '10.2.5', '3.1.5' ],
+280 silly audit   'path-scurry': [ '1.11.1', '2.0.2' ],
+280 silly audit   '@jest/schemas': [ '30.4.1' ],
+280 silly audit   '@jest/snapshot-utils': [ '30.4.1' ],
+280 silly audit   '@jest/source-map': [ '30.0.1' ],
+280 silly audit   '@jest/test-result': [ '30.4.1' ],
+280 silly audit   '@jest/test-sequencer': [ '30.4.1' ],
+280 silly audit   '@jest/transform': [ '30.4.1' ],
+280 silly audit   '@jest/types': [ '30.4.1' ],
+280 silly audit   '@jridgewell/gen-mapping': [ '0.3.13' ],
+280 silly audit   '@jridgewell/remapping': [ '2.3.5' ],
+280 silly audit   '@jridgewell/resolve-uri': [ '3.1.2' ],
+280 silly audit   '@jridgewell/source-map': [ '0.3.11' ],
+280 silly audit   '@jridgewell/sourcemap-codec': [ '1.5.5' ],
+280 silly audit   '@lukeed/csprng': [ '1.1.0' ],
+280 silly audit   '@microsoft/tsdoc': [ '0.16.0' ],
+280 silly audit   '@napi-rs/wasm-runtime': [ '1.1.6' ],
+280 silly audit   '@nestjs/cli': [ '11.0.24' ],
+280 silly audit   'ajv-formats': [ '2.1.1', '3.0.1' ],
+280 silly audit   'ajv-keywords': [ '5.1.0', '3.5.2' ],
+280 silly audit   'eslint-scope': [ '5.1.1', '8.4.0' ],
+280 silly audit   estraverse: [ '4.3.0', '5.3.0' ],
+280 silly audit   'schema-utils': [ '4.3.3', '3.3.0' ],
+280 silly audit   webpack: [ '5.106.2', '5.108.4' ],
+280 silly audit   '@nestjs/common': [ '11.1.28' ],
+280 silly audit   '@nestjs/config': [ '4.0.4' ],
+280 silly audit   '@nestjs/core': [ '11.1.28' ],
+280 silly audit   '@nestjs/jwt': [ '11.0.2' ],
+280 silly audit   '@nestjs/mapped-types': [ '2.1.1' ],
+280 silly audit   '@nestjs/passport': [ '11.0.5' ],
+280 silly audit   '@nestjs/platform-express': [ '11.1.28' ],
+280 silly audit   '@nestjs/schematics': [ '11.1.0' ],
+280 silly audit   '@nestjs/swagger': [ '11.4.6' ],
+280 silly audit   '@nestjs/testing': [ '11.1.28' ],
+280 silly audit   '@noble/hashes': [ '1.8.0' ],
+280 silly audit   '@paralleldrive/cuid2': [ '2.3.1' ],
+280 silly audit   '@pkgjs/parseargs': [ '0.11.0' ],
+280 silly audit   '@pkgr/core': [ '0.3.6' ],
+280 silly audit   '@prisma/client': [ '7.9.0' ],
+280 silly audit   '@prisma/client-runtime-utils': [ '7.9.0' ],
+280 silly audit   '@scarf/scarf': [ '1.4.0' ],
+280 silly audit   '@sinclair/typebox': [ '0.34.52' ],
+280 silly audit   '@sinonjs/commons': [ '3.0.1' ],
+280 silly audit   '@sinonjs/fake-timers': [ '15.4.0' ],
+280 silly audit   '@tokenizer/inflate': [ '0.4.1' ],
+280 silly audit   '@tokenizer/token': [ '0.3.0' ],
+280 silly audit   '@tsconfig/node10': [ '1.0.12' ],
+280 silly audit   '@tsconfig/node12': [ '1.0.11' ],
+280 silly audit   '@tsconfig/node14': [ '1.0.3' ],
+280 silly audit   '@tsconfig/node16': [ '1.0.4' ],
+280 silly audit   '@tybys/wasm-util': [ '0.10.3' ],
+280 silly audit   '@types/babel__core': [ '7.20.5' ],
+280 silly audit   '@types/babel__generator': [ '7.27.0' ],
+280 silly audit   '@types/babel__template': [ '7.4.4' ],
+280 silly audit   '@types/babel__traverse': [ '7.28.0' ],
+280 silly audit   '@types/bcrypt': [ '5.0.2' ],
+280 silly audit   '@types/body-parser': [ '1.19.6' ],
+280 silly audit   '@types/connect': [ '3.4.38' ],
+280 silly audit   '@types/cookiejar': [ '2.1.5' ],
+280 silly audit   '@types/eslint': [ '9.6.1' ],
+280 silly audit   '@types/eslint-scope': [ '3.7.7' ],
+280 silly audit   '@types/estree': [ '1.0.9' ],
+280 silly audit   '@types/express': [ '5.0.6' ],
+280 silly audit   '@types/express-serve-static-core': [ '5.1.2' ],
+280 silly audit   '@types/http-errors': [ '2.0.5' ],
+280 silly audit   '@types/istanbul-lib-coverage': [ '2.0.6' ],
+280 silly audit   '@types/istanbul-lib-report': [ '3.0.3' ],
+280 silly audit   '@types/istanbul-reports': [ '3.0.4' ],
+280 silly audit   '@types/jest': [ '30.0.0' ],
+280 silly audit   '@types/json-schema': [ '7.0.15' ],
+280 silly audit   '@types/jsonwebtoken': [ '9.0.10' ],
+280 silly audit   '@types/methods': [ '1.1.4' ],
+280 silly audit   '@types/ms': [ '2.1.0' ],
+280 silly audit   '@types/node': [ '24.13.3' ],
+280 silly audit   '@types/passport': [ '1.0.17' ],
+280 silly audit   '@types/passport-jwt': [ '4.0.1' ],
+280 silly audit   '@types/passport-strategy': [ '0.2.38' ],
+280 silly audit   '@types/qs': [ '6.15.1' ],
+280 silly audit   '@types/range-parser': [ '1.2.7' ],
+280 silly audit   '@types/send': [ '1.2.1' ],
+280 silly audit   '@types/serve-static': [ '2.2.0' ],
+280 silly audit   '@types/stack-utils': [ '2.0.3' ],
+280 silly audit   '@types/superagent': [ '8.1.11' ],
+280 silly audit   '@types/supertest': [ '7.2.1' ],
+280 silly audit   '@types/validator': [ '13.15.10' ],
+280 silly audit   '@types/yargs': [ '17.0.35' ],
+280 silly audit   '@types/yargs-parser': [ '21.0.3' ],
+280 silly audit   '@typescript-eslint/eslint-plugin': [ '8.65.0' ],
+280 silly audit   ignore: [ '7.0.6', '5.3.2' ],
+280 silly audit   '@typescript-eslint/parser': [ '8.65.0' ],
+280 silly audit   '@typescript-eslint/project-service': [ '8.65.0' ],
+280 silly audit   '@typescript-eslint/scope-manager': [ '8.65.0' ],
+280 silly audit   '@typescript-eslint/tsconfig-utils': [ '8.65.0' ],
+280 silly audit   '@typescript-eslint/type-utils': [ '8.65.0' ],
+280 silly audit   '@typescript-eslint/types': [ '8.65.0' ],
+280 silly audit   '@typescript-eslint/typescript-estree': [ '8.65.0' ],
+280 silly audit   'balanced-match': [ '4.0.4', '1.0.2' ],
+280 silly audit   '@typescript-eslint/utils': [ '8.65.0' ],
+280 silly audit   '@typescript-eslint/visitor-keys': [ '8.65.0' ],
+280 silly audit   '@ungap/structured-clone': [ '1.3.3' ],
+280 silly audit   '@unrs/resolver-binding-android-arm-eabi': [ '1.12.2' ],
+280 silly audit   '@unrs/resolver-binding-android-arm64': [ '1.12.2' ],
+280 silly audit   '@unrs/resolver-binding-darwin-arm64': [ '1.12.2' ],
+280 silly audit   '@unrs/resolver-binding-darwin-x64': [ '1.12.2' ],
+280 silly audit   '@unrs/resolver-binding-freebsd-x64': [ '1.12.2' ],
+280 silly audit   '@unrs/resolver-binding-linux-arm-gnueabihf': [ '1.12.2' ],
+280 silly audit   '@unrs/resolver-binding-linux-arm-musleabihf': [ '1.12.2' ],
+280 silly audit   '@unrs/resolver-binding-linux-arm64-gnu': [ '1.12.2' ],
+280 silly audit   '@unrs/resolver-binding-linux-arm64-musl': [ '1.12.2' ],
+280 silly audit   '@unrs/resolver-binding-linux-loong64-gnu': [ '1.12.2' ],
+280 silly audit   '@unrs/resolver-binding-linux-loong64-musl': [ '1.12.2' ],
+280 silly audit   '@unrs/resolver-binding-linux-ppc64-gnu': [ '1.12.2' ],
+280 silly audit   '@unrs/resolver-binding-linux-riscv64-gnu': [ '1.12.2' ],
+280 silly audit   '@unrs/resolver-binding-linux-riscv64-musl': [ '1.12.2' ],
+280 silly audit   '@unrs/resolver-binding-linux-s390x-gnu': [ '1.12.2' ],
+280 silly audit   '@unrs/resolver-binding-linux-x64-gnu': [ '1.12.2' ],
+280 silly audit   '@unrs/resolver-binding-linux-x64-musl': [ '1.12.2' ],
+280 silly audit   '@unrs/resolver-binding-openharmony-arm64': [ '1.12.2' ],
+280 silly audit   '@unrs/resolver-binding-wasm32-wasi': [ '1.12.2' ],
+280 silly audit   '@unrs/resolver-binding-win32-arm64-msvc': [ '1.12.2' ],
+280 silly audit   '@unrs/resolver-binding-win32-ia32-msvc': [ '1.12.2' ],
+280 silly audit   '@unrs/resolver-binding-win32-x64-msvc': [ '1.12.2' ],
+280 silly audit   '@webassemblyjs/ast': [ '1.14.1' ],
+280 silly audit   '@webassemblyjs/floating-point-hex-parser': [ '1.13.2' ],
+280 silly audit   '@webassemblyjs/helper-api-error': [ '1.13.2' ],
+280 silly audit   '@webassemblyjs/helper-buffer': [ '1.14.1' ],
+280 silly audit   '@webassemblyjs/helper-numbers': [ '1.13.2' ],
+280 silly audit   '@webassemblyjs/helper-wasm-bytecode': [ '1.13.2' ],
+280 silly audit   '@webassemblyjs/helper-wasm-section': [ '1.14.1' ],
+280 silly audit   '@webassemblyjs/ieee754': [ '1.13.2' ],
+280 silly audit   '@webassemblyjs/leb128': [ '1.13.2' ],
+280 silly audit   '@webassemblyjs/utf8': [ '1.13.2' ],
+280 silly audit   '@webassemblyjs/wasm-edit': [ '1.14.1' ],
+280 silly audit   '@webassemblyjs/wasm-gen': [ '1.14.1' ],
+280 silly audit   '@webassemblyjs/wasm-opt': [ '1.14.1' ],
+280 silly audit   '@webassemblyjs/wasm-parser': [ '1.14.1' ],
+280 silly audit   '@webassemblyjs/wast-printer': [ '1.14.1' ],
+280 silly audit   '@xtuc/ieee754': [ '1.2.0' ],
+280 silly audit   '@xtuc/long': [ '4.2.2' ],
+280 silly audit   accepts: [ '2.0.0' ],
+280 silly audit   acorn: [ '8.17.0' ],
+280 silly audit   'acorn-import-phases': [ '1.0.4' ],
+280 silly audit   'acorn-jsx': [ '5.3.2' ],
+280 silly audit   'acorn-walk': [ '8.3.5' ],
+280 silly audit   'ansi-colors': [ '4.1.3' ],
+280 silly audit   'ansi-escapes': [ '4.3.2' ],
+280 silly audit   ansis: [ '4.2.0' ],
+280 silly audit   anymatch: [ '3.1.3' ],
+280 silly audit   picomatch: [ '2.3.2', '4.0.4' ],
+280 silly audit   'append-field': [ '1.0.0' ],
+280 silly audit   arg: [ '4.1.3' ],
+280 silly audit   'array-timsort': [ '1.0.3' ],
+280 silly audit   asap: [ '2.0.6' ],
+280 silly audit   asynckit: [ '0.4.0' ],
+280 silly audit   'babel-jest': [ '30.4.1' ],
+280 silly audit   'babel-plugin-istanbul': [ '7.0.1' ],
+280 silly audit   'babel-plugin-jest-hoist': [ '30.4.0' ],
+280 silly audit   'babel-preset-current-node-syntax': [ '1.2.0' ],
+280 silly audit   'babel-preset-jest': [ '30.4.0' ],
+280 silly audit   'base64-js': [ '1.5.1' ],
+280 silly audit   'baseline-browser-mapping': [ '2.10.44' ],
+280 silly audit   bcrypt: [ '6.0.0' ],
+280 silly audit   bl: [ '4.1.0' ],
+280 silly audit   'body-parser': [ '2.3.0' ],
+280 silly audit   'content-type': [ '2.0.0', '1.0.5' ],
+280 silly audit   browserslist: [ '4.28.6' ],
+280 silly audit   'bs-logger': [ '0.2.6' ],
+280 silly audit   bser: [ '2.1.1' ],
+280 silly audit   buffer: [ '5.7.1' ],
+280 silly audit   'buffer-equal-constant-time': [ '1.0.1' ],
+280 silly audit   'buffer-from': [ '1.1.2' ],
+280 silly audit   busboy: [ '1.6.0' ],
+280 silly audit   bytes: [ '3.1.2' ],
+280 silly audit   chokidar: [ '4.0.3' ],
+280 silly audit   readdirp: [ '4.1.2' ],
+280 silly audit   'call-bind-apply-helpers': [ '1.0.2' ],
+280 silly audit   'call-bound': [ '1.0.4' ],
+280 silly audit   callsites: [ '3.1.0' ],
+280 silly audit   camelcase: [ '5.3.1', '6.3.0' ],
+280 silly audit   'caniuse-lite': [ '1.0.30001806' ],
+280 silly audit   chalk: [ '4.1.2' ],
+280 silly audit   'char-regex': [ '1.0.2' ],
+280 silly audit   chardet: [ '2.2.0' ],
+280 silly audit   'chrome-trace-event': [ '1.0.4' ],
+280 silly audit   'ci-info': [ '4.4.0' ],
+280 silly audit   'cjs-module-lexer': [ '2.2.0' ],
+280 silly audit   'class-transformer': [ '0.5.1' ],
+280 silly audit   'class-validator': [ '0.15.1' ],
+280 silly audit   'cli-cursor': [ '3.1.0' ],
+280 silly audit   'cli-spinners': [ '2.9.2' ],
+280 silly audit   'cli-table3': [ '0.6.5' ],
+280 silly audit   'cli-width': [ '4.1.0' ],
+280 silly audit   cliui: [ '8.0.1' ],
+280 silly audit   clone: [ '1.0.4' ],
+280 silly audit   co: [ '4.6.0' ],
+280 silly audit   'collect-v8-coverage': [ '1.0.3' ],
+280 silly audit   'color-convert': [ '2.0.1' ],
+280 silly audit   'color-name': [ '1.1.4' ],
+280 silly audit   'combined-stream': [ '1.0.8' ],
+280 silly audit   commander: [ '4.1.1', '2.20.3' ],
+280 silly audit   'comment-json': [ '5.0.0' ],
+280 silly audit   'component-emitter': [ '1.3.1' ],
+280 silly audit   'concat-map': [ '0.0.1' ],
+280 silly audit   'concat-stream': [ '2.0.0' ],
+280 silly audit   'content-disposition': [ '1.1.0' ],
+280 silly audit   'convert-source-map': [ '2.0.0' ],
+280 silly audit   cookie: [ '0.7.2' ],
+280 silly audit   'cookie-signature': [ '1.2.2' ],
+280 silly audit   cookiejar: [ '2.1.4' ],
+280 silly audit   cors: [ '2.8.6' ],
+280 silly audit   cosmiconfig: [ '8.3.6' ],
+280 silly audit   'create-require': [ '1.1.1' ],
+280 silly audit   'cross-spawn': [ '7.0.6' ],
+280 silly audit   debug: [ '4.4.3' ],
+280 silly audit   dedent: [ '1.7.2' ],
+280 silly audit   'deep-is': [ '0.1.4' ],
+280 silly audit   deepmerge: [ '4.3.1' ],
+280 silly audit   defaults: [ '1.0.4' ],
+280 silly audit   'delayed-stream': [ '1.0.0' ],
+280 silly audit   depd: [ '2.0.0' ],
+280 silly audit   'detect-newline': [ '3.1.0' ],
+280 silly audit   dezalgo: [ '1.0.4' ],
+280 silly audit   diff: [ '4.0.4' ],
+280 silly audit   dotenv: [ '17.4.1', '16.6.1' ],
+280 silly audit   'dotenv-expand': [ '12.0.3' ],
+280 silly audit   'dunder-proto': [ '1.0.1' ],
+280 silly audit   eastasianwidth: [ '0.2.0' ],
+280 silly audit   'ecdsa-sig-formatter': [ '1.0.11' ],
+280 silly audit   'ee-first': [ '1.1.1' ],
+280 silly audit   'electron-to-chromium': [ '1.5.394' ],
+280 silly audit   emittery: [ '0.13.1' ],
+280 silly audit   encodeurl: [ '2.0.0' ],
+280 silly audit   'enhanced-resolve': [ '5.24.3' ],
+280 silly audit   'error-ex': [ '1.3.4' ],
+280 silly audit   'es-define-property': [ '1.0.1' ],
+280 silly audit   'es-errors': [ '1.3.0' ],
+280 silly audit   'es-module-lexer': [ '2.3.1' ],
+280 silly audit   'es-object-atoms': [ '1.1.2' ],
+280 silly audit   'es-set-tostringtag': [ '2.1.0' ],
+280 silly audit   escalade: [ '3.2.0' ],
+280 silly audit   'escape-html': [ '1.0.3' ],
+280 silly audit   'escape-string-regexp': [ '4.0.0', '2.0.0' ],
+280 silly audit   eslint: [ '9.39.5' ],
+280 silly audit   'eslint-config-prettier': [ '10.1.8' ],
+280 silly audit   'eslint-plugin-prettier': [ '5.5.6' ],
+280 silly audit   espree: [ '10.4.0' ],
+280 silly audit   esprima: [ '4.0.1' ],
+280 silly audit   esquery: [ '1.7.0' ],
+280 silly audit   esrecurse: [ '4.3.0' ],
+280 silly audit   esutils: [ '2.0.3' ],
+280 silly audit   etag: [ '1.8.1' ],
+280 silly audit   events: [ '3.3.0' ],
+280 silly audit   execa: [ '5.1.1' ],
+280 silly audit   'signal-exit': [ '3.0.7', '4.1.0' ],
+280 silly audit   'exit-x': [ '0.2.2' ],
+280 silly audit   expect: [ '30.4.1' ],
+280 silly audit   express: [ '5.2.1' ],
+280 silly audit   'pure-rand': [ '7.0.1', '6.1.0' ],
+280 silly audit   'fast-deep-equal': [ '3.1.3' ],
+280 silly audit   'fast-diff': [ '1.3.0' ],
+280 silly audit   'fast-json-stable-stringify': [ '2.1.0' ],
+280 silly audit   'fast-levenshtein': [ '2.0.6' ],
+280 silly audit   'fast-safe-stringify': [ '2.1.1' ],
+280 silly audit   'fast-uri': [ '3.1.4' ],
+280 silly audit   'fb-watchman': [ '2.0.2' ],
+280 silly audit   fdir: [ '6.5.0' ],
+280 silly audit   'file-entry-cache': [ '8.0.0' ],
+280 silly audit   'file-type': [ '21.3.4' ],
+280 silly audit   finalhandler: [ '2.1.1' ],
+280 silly audit   'flat-cache': [ '4.0.1' ],
+280 silly audit   flatted: [ '3.4.2' ],
+280 silly audit   'foreground-child': [ '3.3.1' ],
+280 silly audit   'fork-ts-checker-webpack-plugin': [ '9.1.0' ],
+280 silly audit   'form-data': [ '4.0.6' ],
+280 silly audit   'mime-db': [ '1.52.0', '1.54.0' ],
+280 silly audit   'mime-types': [ '2.1.35', '3.0.2' ],
+280 silly audit   formidable: [ '3.5.4' ],
+280 silly audit   forwarded: [ '0.2.0' ],
+280 silly audit   fresh: [ '2.0.0' ],
+280 silly audit   'fs-extra': [ '10.1.0' ],
+280 silly audit   'fs-monkey': [ '1.1.0' ],
+280 silly audit   'fs.realpath': [ '1.0.0' ],
+280 silly audit   fsevents: [ '2.3.3' ],
+280 silly audit   'function-bind': [ '1.1.2' ],
+280 silly audit   gensync: [ '1.0.0-beta.2' ],
+280 silly audit   'get-caller-file': [ '2.0.5' ],
+280 silly audit   'get-intrinsic': [ '1.3.0' ],
+280 silly audit   'get-package-type': [ '0.1.0' ],
+280 silly audit   'get-proto': [ '1.0.1' ],
+280 silly audit   'get-stream': [ '6.0.1' ],
+280 silly audit   'glob-parent': [ '6.0.2' ],
+280 silly audit   'glob-to-regexp': [ '0.4.1' ],
+280 silly audit   gopd: [ '1.2.0' ],
+280 silly audit   'graceful-fs': [ '4.2.11' ],
+280 silly audit   handlebars: [ '4.7.9' ],
+280 silly audit   'source-map': [ '0.6.1', '0.7.4' ],
+280 silly audit   'has-flag': [ '4.0.0' ],
+280 silly audit   'has-symbols': [ '1.1.0' ],
+280 silly audit   'has-tostringtag': [ '1.0.2' ],
+280 silly audit   hasown: [ '2.0.4' ],
+280 silly audit   'html-escaper': [ '2.0.2' ],
+280 silly audit   'http-errors': [ '2.0.1' ],
+280 silly audit   'human-signals': [ '2.1.0' ],
+280 silly audit   'iconv-lite': [ '0.7.3' ],
+280 silly audit   ieee754: [ '1.2.1' ],
+280 silly audit   'import-fresh': [ '3.3.1' ],
+280 silly audit   'import-local': [ '3.2.0' ],
+280 silly audit   imurmurhash: [ '0.1.4' ],
+280 silly audit   inflight: [ '1.0.6' ],
+280 silly audit   inherits: [ '2.0.4' ],
+280 silly audit   'ipaddr.js': [ '1.9.1' ],
+280 silly audit   'is-arrayish': [ '0.2.1' ],
+280 silly audit   'is-extglob': [ '2.1.1' ],
+280 silly audit   'is-fullwidth-code-point': [ '3.0.0' ],
+280 silly audit   'is-generator-fn': [ '2.1.0' ],
+280 silly audit   'is-glob': [ '4.0.3' ],
+280 silly audit   'is-interactive': [ '1.0.0' ],
+280 silly audit   'is-promise': [ '4.0.0' ],
+280 silly audit   'is-stream': [ '2.0.1' ],
+280 silly audit   'is-unicode-supported': [ '0.1.0' ],
+280 silly audit   isexe: [ '2.0.0' ],
+280 silly audit   'istanbul-lib-coverage': [ '3.2.2' ],
+280 silly audit   'istanbul-lib-instrument': [ '6.0.3' ],
+280 silly audit   'istanbul-lib-report': [ '3.0.1' ],
+280 silly audit   'istanbul-lib-source-maps': [ '5.0.6' ],
+280 silly audit   'istanbul-reports': [ '3.2.0' ],
+280 silly audit   iterare: [ '1.2.1' ],
+280 silly audit   jackspeak: [ '3.4.3' ],
+280 silly audit   jest: [ '30.4.2' ],
+280 silly audit   'jest-changed-files': [ '30.4.1' ],
+280 silly audit   'jest-circus': [ '30.4.2' ],
+280 silly audit   'jest-cli': [ '30.4.2' ],
+280 silly audit   'jest-config': [ '30.4.2' ],
+280 silly audit   'jest-diff': [ '30.4.1' ],
+280 silly audit   'jest-docblock': [ '30.4.0' ],
+280 silly audit   'jest-each': [ '30.4.1' ],
+280 silly audit   'jest-environment-node': [ '30.4.1' ],
+280 silly audit   'jest-haste-map': [ '30.4.1' ],
+280 silly audit   'jest-leak-detector': [ '30.4.1' ],
+280 silly audit   'jest-matcher-utils': [ '30.4.1' ],
+280 silly audit   'jest-message-util': [ '30.4.1' ],
+280 silly audit   'jest-mock': [ '30.4.1' ],
+280 silly audit   'jest-pnp-resolver': [ '1.2.3' ],
+280 silly audit   'jest-regex-util': [ '30.4.0' ],
+280 silly audit   'jest-resolve': [ '30.4.1' ],
+280 silly audit   'jest-resolve-dependencies': [ '30.4.2' ],
+280 silly audit   'jest-runner': [ '30.4.2' ],
+280 silly audit   'source-map-support': [ '0.5.13', '0.5.21' ],
+280 silly audit   'jest-runtime': [ '30.4.2' ],
+280 silly audit   'jest-snapshot': [ '30.4.1' ],
+280 silly audit   'jest-util': [ '30.4.1' ],
+280 silly audit   'jest-validate': [ '30.4.1' ],
+280 silly audit   'jest-watcher': [ '30.4.1' ],
+280 silly audit   'jest-worker': [ '30.4.1', '27.5.1' ],
+280 silly audit   'supports-color': [ '8.1.1', '7.2.0' ],
+280 silly audit   jiti: [ '2.7.0' ],
+280 silly audit   'js-tokens': [ '4.0.0' ],
+280 silly audit   jsesc: [ '3.1.0' ],
+280 silly audit   'json-buffer': [ '3.0.1' ],
+280 silly audit   'json-parse-even-better-errors': [ '2.3.1' ],
+280 silly audit   'json-stable-stringify-without-jsonify': [ '1.0.1' ],
+280 silly audit   json5: [ '2.2.3' ],
+280 silly audit   'jsonc-parser': [ '3.3.1' ],
+280 silly audit   jsonfile: [ '6.2.1' ],
+280 silly audit   jsonwebtoken: [ '9.0.3' ],
+280 silly audit   jwa: [ '2.0.1' ],
+280 silly audit   jws: [ '4.0.1' ],
+280 silly audit   keyv: [ '4.5.4' ],
+280 silly audit   leven: [ '3.1.0' ],
+280 silly audit   levn: [ '0.4.1' ],
+280 silly audit   'libphonenumber-js': [ '1.13.9' ],
+280 silly audit   'lines-and-columns': [ '1.2.4' ],
+280 silly audit   'load-esm': [ '1.0.3' ],
+280 silly audit   'loader-runner': [ '4.3.2' ],
+280 silly audit   lodash: [ '4.18.1' ],
+280 silly audit   'lodash.includes': [ '4.3.0' ],
+280 silly audit   'lodash.isboolean': [ '3.0.3' ],
+280 silly audit   'lodash.isinteger': [ '4.0.4' ],
+280 silly audit   'lodash.isnumber': [ '3.0.3' ],
+280 silly audit   'lodash.isplainobject': [ '4.0.6' ],
+280 silly audit   'lodash.isstring': [ '4.0.1' ],
+280 silly audit   'lodash.memoize': [ '4.1.2' ],
+280 silly audit   'lodash.merge': [ '4.6.2' ],
+280 silly audit   'lodash.once': [ '4.1.1' ],
+280 silly audit   'log-symbols': [ '4.1.0' ],
+280 silly audit   'magic-string': [ '0.30.17' ],
+280 silly audit   'make-dir': [ '4.0.0' ],
+280 silly audit   'make-error': [ '1.3.6' ],
+280 silly audit   makeerror: [ '1.0.12' ],
+280 silly audit   'math-intrinsics': [ '1.1.0' ],
+280 silly audit   'media-typer': [ '1.1.0', '0.3.0' ],
+280 silly audit   memfs: [ '3.5.3' ],
+280 silly audit   'merge-descriptors': [ '2.0.0' ],
+280 silly audit   'merge-stream': [ '2.0.0' ],
+280 silly audit   methods: [ '1.1.2' ],
+280 silly audit   mime: [ '2.6.0' ],
+280 silly audit   'mimic-fn': [ '2.1.0' ],
+280 silly audit   minimist: [ '1.2.8' ],
+280 silly audit   'minimizer-webpack-plugin': [ '5.6.1' ],
+280 silly audit   minipass: [ '7.1.3' ],
+280 silly audit   ms: [ '2.1.3' ],
+280 silly audit   multer: [ '2.2.0' ],
+280 silly audit   'type-is': [ '1.6.18', '2.1.0' ],
+280 silly audit   'mute-stream': [ '2.0.0' ],
+280 silly audit   'napi-postinstall': [ '0.3.4' ],
+280 silly audit   'natural-compare': [ '1.4.0' ],
+280 silly audit   negotiator: [ '1.0.0' ],
+280 silly audit   'neo-async': [ '2.6.2' ],
+280 silly audit   'node-abort-controller': [ '3.1.1' ],
+280 silly audit   'node-addon-api': [ '8.9.0' ],
+280 silly audit   'node-emoji': [ '1.11.0' ],
+280 silly audit   'node-gyp-build': [ '4.8.4' ],
+280 silly audit   'node-int64': [ '0.4.0' ],
+280 silly audit   'node-releases': [ '2.0.51' ],
+280 silly audit   'normalize-path': [ '3.0.0' ],
+280 silly audit   'npm-run-path': [ '4.0.1' ],
+280 silly audit   'object-assign': [ '4.1.1' ],
+280 silly audit   'object-inspect': [ '1.13.4' ],
+280 silly audit   'on-finished': [ '2.4.1' ],
+280 silly audit   once: [ '1.4.0' ],
+280 silly audit   onetime: [ '5.1.2' ],
+280 silly audit   optionator: [ '0.9.4' ],
+280 silly audit   ora: [ '5.4.1' ],
+280 silly audit   'p-try': [ '2.2.0' ],
+280 silly audit   'package-json-from-dist': [ '1.0.1' ],
+280 silly audit   'parent-module': [ '1.0.1' ],
+280 silly audit   'parse-json': [ '5.2.0' ],
+280 silly audit   parseurl: [ '1.3.3' ],
+280 silly audit   passport: [ '0.7.0' ],
+280 silly audit   'passport-jwt': [ '4.0.1' ],
+280 silly audit   'passport-strategy': [ '1.0.0' ],
+280 silly audit   'path-exists': [ '4.0.0' ],
+280 silly audit   'path-is-absolute': [ '1.0.1' ],
+280 silly audit   'path-key': [ '3.1.1' ],
+280 silly audit   'path-to-regexp': [ '8.4.2' ],
+280 silly audit   'path-type': [ '4.0.0' ],
+280 silly audit   pause: [ '0.0.1' ],
+280 silly audit   picocolors: [ '1.1.1' ],
+280 silly audit   pirates: [ '4.0.7' ],
+280 silly audit   'pkg-dir': [ '4.2.0' ],
+280 silly audit   pluralize: [ '8.0.0' ],
+280 silly audit   'prelude-ls': [ '1.2.1' ],
+280 silly audit   prettier: [ '3.9.6' ],
+280 silly audit   'prettier-linter-helpers': [ '1.0.1' ],
+280 silly audit   'pretty-format': [ '30.4.1' ],
+280 silly audit   'proxy-addr': [ '2.0.7' ],
+280 silly audit   punycode: [ '2.3.1' ],
+280 silly audit   qs: [ '6.15.3' ],
+280 silly audit   'range-parser': [ '1.3.0' ],
+280 silly audit   'raw-body': [ '3.0.2' ],
+280 silly audit   'react-is': [ '18.3.1', '19.2.7' ],
+280 silly audit   'readable-stream': [ '3.6.2' ],
+280 silly audit   'reflect-metadata': [ '0.2.2' ],
+280 silly audit   'require-directory': [ '2.1.1' ],
+280 silly audit   'require-from-string': [ '2.0.2' ],
+280 silly audit   'resolve-cwd': [ '3.0.0' ],
+280 silly audit   'restore-cursor': [ '3.1.0' ],
+280 silly audit   router: [ '2.2.0' ],
+280 silly audit   'safe-buffer': [ '5.2.1' ],
+280 silly audit   'safer-buffer': [ '2.1.2' ],
+280 silly audit   send: [ '1.2.1' ],
+280 silly audit   'serve-static': [ '2.2.1' ],
+280 silly audit   setprototypeof: [ '1.2.0' ],
+280 silly audit   'shebang-command': [ '2.0.0' ],
+280 silly audit   'shebang-regex': [ '3.0.0' ],
+280 silly audit   'side-channel': [ '1.1.1' ],
+280 silly audit   'side-channel-list': [ '1.0.1' ],
+280 silly audit   'side-channel-map': [ '1.0.1' ],
+280 silly audit   'side-channel-weakmap': [ '1.0.2' ],
+280 silly audit   slash: [ '3.0.0' ],
+280 silly audit   'sprintf-js': [ '1.0.3' ],
+280 silly audit   'stack-utils': [ '2.0.6' ],
+280 silly audit   statuses: [ '2.0.2' ],
+280 silly audit   streamsearch: [ '1.1.0' ],
+280 silly audit   string_decoder: [ '1.3.0' ],
+280 silly audit   'string-length': [ '4.0.2' ],
+280 silly audit   'strip-bom': [ '4.0.0', '3.0.0' ],
+280 silly audit   'strip-final-newline': [ '2.0.0' ],
+280 silly audit   'strip-json-comments': [ '3.1.1' ],
+280 silly audit   strtok3: [ '10.3.5' ],
+280 silly audit   superagent: [ '10.3.0' ],
+280 silly audit   supertest: [ '7.2.2' ],
+280 silly audit   'swagger-ui-dist': [ '5.32.8' ],
+280 silly audit   'swagger-ui-express': [ '5.0.1' ],
+280 silly audit   'symbol-observable': [ '4.0.0' ],
+280 silly audit   synckit: [ '0.11.13' ],
+280 silly audit   tapable: [ '2.3.3' ],
+280 silly audit   terser: [ '5.49.0' ],
+280 silly audit   'terser-webpack-plugin': [ '5.6.1' ],
+280 silly audit   'test-exclude': [ '6.0.0' ],
+280 silly audit   tinyglobby: [ '0.2.17' ],
+280 silly audit   tmpl: [ '1.0.5' ],
+280 silly audit   toidentifier: [ '1.0.1' ],
+280 silly audit   'token-types': [ '6.1.2' ],
+280 silly audit   'ts-api-utils': [ '2.5.0' ],
+280 silly audit   'ts-jest': [ '29.4.11' ],
+280 silly audit   'type-fest': [ '4.41.0', '0.21.3' ],
+280 silly audit   'ts-loader': [ '9.6.2' ],
+280 silly audit   'ts-node': [ '10.9.2' ],
+280 silly audit   'tsconfig-paths': [ '4.2.0' ],
+280 silly audit   'tsconfig-paths-webpack-plugin': [ '4.2.0' ],
+280 silly audit   tslib: [ '2.8.1' ],
+280 silly audit   'type-check': [ '0.4.0' ],
+280 silly audit   'type-detect': [ '4.0.8' ],
+280 silly audit   typedarray: [ '0.0.6' ],
+280 silly audit   typescript: [ '5.9.3' ],
+280 silly audit   'typescript-eslint': [ '8.65.0' ],
+280 silly audit   'uglify-js': [ '3.19.3' ],
+280 silly audit   uid: [ '2.0.2' ],
+280 silly audit   'uint8array-extras': [ '1.5.0' ],
+280 silly audit   'undici-types': [ '7.18.2' ],
+280 silly audit   universalify: [ '2.0.1' ],
+280 silly audit   unpipe: [ '1.0.0' ],
+280 silly audit   'unrs-resolver': [ '1.12.2' ],
+280 silly audit   'update-browserslist-db': [ '1.2.3' ],
+280 silly audit   'uri-js': [ '4.4.1' ],
+280 silly audit   'util-deprecate': [ '1.0.2' ],
+280 silly audit   'utils-merge': [ '1.0.1' ],
+280 silly audit   'v8-compile-cache-lib': [ '3.0.1' ],
+280 silly audit   'v8-to-istanbul': [ '9.3.0' ],
+280 silly audit   validator: [ '13.15.35' ],
+280 silly audit   vary: [ '1.1.2' ],
+280 silly audit   walker: [ '1.0.8' ],
+280 silly audit   watchpack: [ '2.5.2' ],
+280 silly audit   wcwidth: [ '1.0.1' ],
+280 silly audit   'webpack-node-externals': [ '3.0.0' ],
+280 silly audit   'webpack-sources': [ '3.5.1' ],
+280 silly audit   which: [ '2.0.2' ],
+280 silly audit   'word-wrap': [ '1.2.5' ],
+280 silly audit   wordwrap: [ '1.0.0' ],
+280 silly audit   wrappy: [ '1.0.2' ],
+280 silly audit   'write-file-atomic': [ '5.0.1' ],
+280 silly audit   y18n: [ '5.0.8' ],
+280 silly audit   yallist: [ '3.1.1' ],
+280 silly audit   yargs: [ '17.7.3' ],
+280 silly audit   'yargs-parser': [ '21.1.1' ],
+280 silly audit   yn: [ '3.1.1' ],
+280 silly audit   'yocto-queue': [ '0.1.0' ],
+280 silly audit   'yoctocolors-cjs': [ '2.1.3' ],
+280 silly audit   prisma: [ '6.19.2' ],
+280 silly audit   '@prisma/config': [ '6.19.2' ],
+280 silly audit   '@prisma/engines': [ '6.19.2' ],
+280 silly audit   c12: [ '3.1.0' ],
+280 silly audit   'deepmerge-ts': [ '7.1.5' ],
+280 silly audit   effect: [ '3.18.4' ],
+280 silly audit   empathic: [ '2.0.0' ],
+280 silly audit   '@prisma/debug': [ '6.19.2' ],
+280 silly audit   '@prisma/engines-version': [ '7.1.1-3.c2990dca591cba766e3b7ef5d9e8a84796e47ab7' ],
+280 silly audit   '@prisma/fetch-engine': [ '6.19.2' ],
+280 silly audit   '@prisma/get-platform': [ '6.19.2' ],
+280 silly audit   confbox: [ '0.2.4' ],
+280 silly audit   defu: [ '6.1.7' ],
+280 silly audit   exsolve: [ '1.1.0' ],
+280 silly audit   giget: [ '2.0.0' ],
+280 silly audit   ohash: [ '2.0.11' ],
+280 silly audit   pathe: [ '2.0.3' ],
+280 silly audit   'perfect-debounce': [ '1.0.0' ],
+280 silly audit   'pkg-types': [ '2.3.1' ],
+280 silly audit   rc9: [ '2.1.2' ],
+280 silly audit   '@standard-schema/spec': [ '1.1.0' ],
+280 silly audit   'fast-check': [ '3.23.2' ],
+280 silly audit   citty: [ '0.1.6', '0.2.2' ],
+280 silly audit   consola: [ '3.4.2' ],
+280 silly audit   'node-fetch-native': [ '1.6.7' ],
+280 silly audit   nypm: [ '0.6.8' ],
+280 silly audit   tinyexec: [ '1.2.4' ],
+280 silly audit   destr: [ '2.0.5' ]
+280 silly audit }
+281 http cache @prisma/fetch-engine@https://registry.npmjs.org/@prisma/fetch-engine/-/fetch-engine-6.19.2.tgz 0ms (cache hit)
+282 http cache @prisma/get-platform@https://registry.npmjs.org/@prisma/get-platform/-/get-platform-6.19.2.tgz 0ms (cache hit)
+283 http cache @prisma/engines@https://registry.npmjs.org/@prisma/engines/-/engines-6.19.2.tgz 0ms (cache hit)
+284 http cache tinyexec@https://registry.npmjs.org/tinyexec/-/tinyexec-1.2.4.tgz 1ms (cache hit)
+285 http cache nypm@https://registry.npmjs.org/nypm/-/nypm-0.6.8.tgz 0ms (cache hit)
+286 http cache node-fetch-native@https://registry.npmjs.org/node-fetch-native/-/node-fetch-native-1.6.7.tgz 0ms (cache hit)
+287 http cache consola@https://registry.npmjs.org/consola/-/consola-3.4.2.tgz 0ms (cache hit)
+288 http cache citty@https://registry.npmjs.org/citty/-/citty-0.1.6.tgz 0ms (cache hit)
+289 http cache @prisma/config@https://registry.npmjs.org/@prisma/config/-/config-6.19.2.tgz 0ms (cache hit)
+290 silly tarball no local data for @prisma/fetch-engine@https://registry.npmjs.org/@prisma/fetch-engine/-/fetch-engine-6.19.2.tgz. Extracting by manifest.
+291 silly tarball no local data for @prisma/get-platform@https://registry.npmjs.org/@prisma/get-platform/-/get-platform-6.19.2.tgz. Extracting by manifest.
+292 http cache rc9@https://registry.npmjs.org/rc9/-/rc9-2.1.2.tgz 0ms (cache hit)
+293 http cache perfect-debounce@https://registry.npmjs.org/perfect-debounce/-/perfect-debounce-1.0.0.tgz 0ms (cache hit)
+294 http cache @prisma/engines-version@https://registry.npmjs.org/@prisma/engines-version/-/engines-version-7.1.1-3.c2990dca591cba766e3b7ef5d9e8a84796e47ab7.tgz 0ms (cache hit)
+295 http cache giget@https://registry.npmjs.org/giget/-/giget-2.0.0.tgz 0ms (cache hit)
+296 http cache @prisma/debug@https://registry.npmjs.org/@prisma/debug/-/debug-6.19.2.tgz 0ms (cache hit)
+297 http cache prisma@https://registry.npmjs.org/prisma/-/prisma-6.19.2.tgz 0ms (cache hit)
+298 silly tarball no local data for @prisma/engines@https://registry.npmjs.org/@prisma/engines/-/engines-6.19.2.tgz. Extracting by manifest.
+299 http cache effect@https://registry.npmjs.org/effect/-/effect-3.18.4.tgz 0ms (cache hit)
+300 http cache citty@https://registry.npmjs.org/citty/-/citty-0.2.2.tgz 0ms (cache hit)
+301 http cache dotenv@https://registry.npmjs.org/dotenv/-/dotenv-16.6.1.tgz 0ms (cache hit)
+302 silly tarball no local data for tinyexec@https://registry.npmjs.org/tinyexec/-/tinyexec-1.2.4.tgz. Extracting by manifest.
+303 http cache c12@https://registry.npmjs.org/c12/-/c12-3.1.0.tgz 0ms (cache hit)
+304 silly tarball no local data for nypm@https://registry.npmjs.org/nypm/-/nypm-0.6.8.tgz. Extracting by manifest.
+305 silly tarball no local data for node-fetch-native@https://registry.npmjs.org/node-fetch-native/-/node-fetch-native-1.6.7.tgz. Extracting by manifest.
+306 silly tarball no local data for consola@https://registry.npmjs.org/consola/-/consola-3.4.2.tgz. Extracting by manifest.
+307 silly tarball no local data for citty@https://registry.npmjs.org/citty/-/citty-0.1.6.tgz. Extracting by manifest.
+308 silly tarball no local data for @prisma/config@https://registry.npmjs.org/@prisma/config/-/config-6.19.2.tgz. Extracting by manifest.
+309 silly tarball no local data for rc9@https://registry.npmjs.org/rc9/-/rc9-2.1.2.tgz. Extracting by manifest.
+310 silly tarball no local data for perfect-debounce@https://registry.npmjs.org/perfect-debounce/-/perfect-debounce-1.0.0.tgz. Extracting by manifest.
+311 silly tarball no local data for @prisma/engines-version@https://registry.npmjs.org/@prisma/engines-version/-/engines-version-7.1.1-3.c2990dca591cba766e3b7ef5d9e8a84796e47ab7.tgz. Extracting by manifest.
+312 silly tarball no local data for giget@https://registry.npmjs.org/giget/-/giget-2.0.0.tgz. Extracting by manifest.
+313 silly tarball no local data for @prisma/debug@https://registry.npmjs.org/@prisma/debug/-/debug-6.19.2.tgz. Extracting by manifest.
+314 silly tarball no local data for prisma@https://registry.npmjs.org/prisma/-/prisma-6.19.2.tgz. Extracting by manifest.
+315 silly tarball no local data for effect@https://registry.npmjs.org/effect/-/effect-3.18.4.tgz. Extracting by manifest.
+316 silly tarball no local data for citty@https://registry.npmjs.org/citty/-/citty-0.2.2.tgz. Extracting by manifest.
+317 silly tarball no local data for c12@https://registry.npmjs.org/c12/-/c12-3.1.0.tgz. Extracting by manifest.
+318 http fetch GET 200 https://registry.npmjs.org/tinyexec/-/tinyexec-1.2.4.tgz 149ms (cache miss)
+319 http fetch GET 200 https://registry.npmjs.org/@prisma/config/-/config-6.19.2.tgz 344ms (cache miss)
+320 http fetch GET 200 https://registry.npmjs.org/citty/-/citty-0.1.6.tgz 648ms (cache miss)
+321 http fetch GET 200 https://registry.npmjs.org/@prisma/engines-version/-/engines-version-7.1.1-3.c2990dca591cba766e3b7ef5d9e8a84796e47ab7.tgz 736ms (cache miss)
+322 http fetch GET 200 https://registry.npmjs.org/@prisma/engines/-/engines-6.19.2.tgz 800ms (cache miss)
+323 http fetch GET 200 https://registry.npmjs.org/perfect-debounce/-/perfect-debounce-1.0.0.tgz 822ms (cache miss)
+324 http fetch GET 200 https://registry.npmjs.org/@prisma/debug/-/debug-6.19.2.tgz 831ms (cache miss)
+325 http fetch GET 200 https://registry.npmjs.org/giget/-/giget-2.0.0.tgz 855ms (cache miss)
+326 http fetch GET 200 https://registry.npmjs.org/citty/-/citty-0.2.2.tgz 853ms (cache miss)
+327 http fetch GET 200 https://registry.npmjs.org/c12/-/c12-3.1.0.tgz 871ms (cache miss)
+328 http fetch GET 200 https://registry.npmjs.org/nypm/-/nypm-0.6.8.tgz 921ms (cache miss)
+329 http fetch GET 200 https://registry.npmjs.org/@prisma/get-platform/-/get-platform-6.19.2.tgz 964ms (cache miss)
+330 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 1297ms
+331 silly audit report {
+331 silly audit report   effect: [
+331 silly audit report     {
+331 silly audit report       id: 1115356,
+331 silly audit report       url: 'https://github.com/advisories/GHSA-38f7-945m-qr2g',
+331 silly audit report       title: 'Effect `AsyncLocalStorage` context lost/contaminated inside Effect fibers under concurrent load with RPC',
+331 silly audit report       severity: 'high',
+331 silly audit report       vulnerable_versions: '<3.20.0',
+331 silly audit report       cwe: [Array],
+331 silly audit report       cvss: [Object]
+331 silly audit report     }
+331 silly audit report   ]
+331 silly audit report }
+332 silly packumentCache corgi:https://registry.npmjs.org/effect cache-miss
+333 http fetch GET 200 https://registry.npmjs.org/rc9/-/rc9-2.1.2.tgz 1403ms (cache miss)
+334 http fetch GET 200 https://registry.npmjs.org/consola/-/consola-3.4.2.tgz 1412ms (cache miss)
+335 http fetch GET 200 https://registry.npmjs.org/node-fetch-native/-/node-fetch-native-1.6.7.tgz 1847ms (cache miss)
+336 http fetch GET 200 https://registry.npmjs.org/effect 726ms (cache miss)
+337 silly packumentCache corgi:https://registry.npmjs.org/effect set size:undefined disposed:false
+338 silly packumentCache corgi:https://registry.npmjs.org/@prisma%2fconfig cache-miss
+339 http fetch GET 200 https://registry.npmjs.org/@prisma/fetch-engine/-/fetch-engine-6.19.2.tgz 2786ms (cache miss)
+340 http fetch GET 200 https://registry.npmjs.org/@prisma%2fconfig 2993ms (cache miss)
+341 silly packumentCache corgi:https://registry.npmjs.org/@prisma%2fconfig set size:undefined disposed:false
+342 silly packumentCache corgi:https://registry.npmjs.org/prisma cache-miss
+343 http fetch GET 200 https://registry.npmjs.org/effect/-/effect-3.18.4.tgz 18345ms (cache miss)
+344 http fetch GET 200 https://registry.npmjs.org/prisma 13568ms (cache miss)
+345 silly packumentCache corgi:https://registry.npmjs.org/prisma set size:undefined disposed:false
+346 silly packumentCache corgi:https://registry.npmjs.org/@prisma%2fclient cache-miss
+347 http fetch GET 200 https://registry.npmjs.org/@prisma%2fclient 13429ms (cache miss)
+348 silly packumentCache corgi:https://registry.npmjs.org/@prisma%2fclient set size:undefined disposed:false
+349 http fetch GET 200 https://registry.npmjs.org/prisma/-/prisma-6.19.2.tgz 45643ms (cache miss)
+350 info run prisma@6.19.2 preinstall node_modules/prisma node scripts/preinstall-entry.js
+351 info run prisma@6.19.2 preinstall { code: 'EPERM', signal: undefined }
+352 warn cleanup Failed to remove some directories [
+352 warn cleanup   [
+352 warn cleanup     'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\effect',
+352 warn cleanup     [Error: EPERM: operation not permitted, rmdir 'C:\Users\Herman\Documents\Codex\2026-07-21\r-partition-des-t-ches-projet\api\node_modules\effect\dist\dts\internal\stm'] {
+352 warn cleanup       errno: -4048,
+352 warn cleanup       code: 'EPERM',
+352 warn cleanup       syscall: 'rmdir',
+352 warn cleanup       path: 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\effect\\dist\\dts\\internal\\stm'
+352 warn cleanup     }
+352 warn cleanup   ],
+352 warn cleanup   [
+352 warn cleanup     '\\\\?\\C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\effect',
+352 warn cleanup     [Error: EPERM: operation not permitted, rmdir 'C:\Users\Herman\Documents\Codex\2026-07-21\r-partition-des-t-ches-projet\api\node_modules\effect\dist\esm\internal'] {
+352 warn cleanup       errno: -4048,
+352 warn cleanup       code: 'EPERM',
+352 warn cleanup       syscall: 'rmdir',
+352 warn cleanup       path: 'C:\\Users\\Herman\\Documents\\Codex\\2026-07-21\\r-partition-des-t-ches-projet\\api\\node_modules\\effect\\dist\\esm\\internal'
+352 warn cleanup     }
+352 warn cleanup   ]
+352 warn cleanup ]
+353 verbose stack Error: spawn EPERM
+353 verbose stack     at ChildProcess.spawn (node:internal/child_process:421:11)
+353 verbose stack     at spawn (node:child_process:796:9)
+353 verbose stack     at promiseSpawn (C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\promise-spawn\lib\index.js:39:16)
+353 verbose stack     at spawnWithShell (C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\promise-spawn\lib\index.js:124:10)
+353 verbose stack     at promiseSpawn (C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\promise-spawn\lib\index.js:12:12)
+353 verbose stack     at runScriptPkg (C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\run-script\lib\run-script-pkg.js:79:13)
+353 verbose stack     at runScript (C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\run-script\lib\run-script.js:9:12)
+353 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\rebuild.js:327:17
+353 verbose stack     at run (C:\Program Files\nodejs\node_modules\npm\node_modules\promise-call-limit\dist\commonjs\index.js:67:22)
+353 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\promise-call-limit\dist\commonjs\index.js:84:9
+354 error code EPERM
+355 error syscall spawn
+356 error errno -4048
+357 error Error: spawn EPERM
+357 error     at ChildProcess.spawn (node:internal/child_process:421:11)
+357 error     at spawn (node:child_process:796:9)
+357 error     at promiseSpawn (C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\promise-spawn\lib\index.js:39:16)
+357 error     at spawnWithShell (C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\promise-spawn\lib\index.js:124:10)
+357 error     at promiseSpawn (C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\promise-spawn\lib\index.js:12:12)
+357 error     at runScriptPkg (C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\run-script\lib\run-script-pkg.js:79:13)
+357 error     at runScript (C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\run-script\lib\run-script.js:9:12)
+357 error     at C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\rebuild.js:327:17
+357 error     at run (C:\Program Files\nodejs\node_modules\npm\node_modules\promise-call-limit\dist\commonjs\index.js:67:22)
+357 error     at C:\Program Files\nodejs\node_modules\npm\node_modules\promise-call-limit\dist\commonjs\index.js:84:9 {
+357 error   errno: -4048,
+357 error   code: 'EPERM',
+357 error   syscall: 'spawn'
+357 error }
+358 error
+358 error The operation was rejected by your operating system.
+358 error It's possible that the file was already in use (by a text editor or antivirus),
+358 error or that you lack permissions to access it.
+358 error
+358 error If you believe this might be a permissions issue, please double-check the
+358 error permissions of the file and its containing directories, or try running
+358 error the command again as root/Administrator.
+359 silly unfinished npm timer reify 1784641149442
+360 silly unfinished npm timer reify:build 1784641202375
+361 silly unfinished npm timer build 1784641202376
+362 silly unfinished npm timer build:deps 1784641202376
+363 silly unfinished npm timer build:run:preinstall 1784641202382
+364 silly unfinished npm timer build:run:preinstall:node_modules/prisma 1784641202383
+365 verbose cwd C:\Users\Herman\Documents\Codex\2026-07-21\r-partition-des-t-ches-projet\api
+366 verbose os Windows_NT 10.0.26200
+367 verbose node v24.14.0
+368 verbose npm  v11.9.0
+369 verbose exit -4048
+370 verbose code -4048
+371 error A complete log of this run can be found in: C:\Users\Herman\Documents\Codex\2026-07-21\r-partition-des-t-ches-projet\.npm-cache\_logs\2026-07-21T13_39_07_896Z-debug-0.log
