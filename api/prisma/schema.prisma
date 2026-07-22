@@ -1,0 +1,89 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  STUDENT
+  ADMIN
+}
+
+enum ApplicationType {
+  AVI
+  ADL
+  CAMPUS_FRANCE
+  SCHOLARSHIP
+}
+
+enum ApplicationStatus {
+  DRAFT
+  SUBMITTED
+  PAYMENT_PENDING
+  PAID
+  IN_REVIEW
+  APPROVED
+  DELIVERED
+  REJECTED
+  CANCELLED
+}
+
+enum PaymentStatus {
+  PENDING
+  SUCCEEDED
+  FAILED
+  REFUNDED
+}
+
+model User {
+  id           String        @id @default(cuid())
+  email        String        @unique
+  passwordHash String
+  firstName    String
+  lastName     String
+  role         Role          @default(STUDENT)
+  applications Application[]
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+}
+
+model Application {
+  id          String            @id @default(cuid())
+  reference   String            @unique
+  type        ApplicationType
+  status      ApplicationStatus @default(DRAFT)
+  formData    Json
+  userId      String
+  user        User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+  documents   Document[]
+  payments    Payment[]
+  createdAt   DateTime          @default(now())
+  updatedAt   DateTime          @updatedAt
+}
+
+model Document {
+  id            String      @id @default(cuid())
+  name          String
+  storageKey    String      @unique
+  mimeType      String
+  size          Int
+  applicationId String
+  application   Application @relation(fields: [applicationId], references: [id], onDelete: Cascade)
+  createdAt     DateTime    @default(now())
+}
+
+model Payment {
+  id              String        @id @default(cuid())
+  provider        String
+  providerPaymentId String?     @unique
+  amount          Int
+  currency        String        @default("EUR")
+  status          PaymentStatus @default(PENDING)
+  applicationId   String
+  application     Application   @relation(fields: [applicationId], references: [id], onDelete: Cascade)
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+}
