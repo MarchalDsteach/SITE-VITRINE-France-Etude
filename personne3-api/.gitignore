@@ -5,3 +5,8 @@ dist/
 *.log
 .DS_Store
 coverage/
+
+# Fichiers JavaScript produits localement à partir des tests TypeScript
+test/**/*.js
+test/**/*.js.map
+test/**/*.d.ts

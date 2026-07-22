@@ -49,7 +49,8 @@ L'API démarre sur `http://localhost:3001`. Health check : `http://localhost:300
 | `npm run start:dev` | Démarre en mode watch (dev) |
 | `npm run build` | Build de production (`dist/`) |
 | `npm run start:prod` | Lance le build (`node dist/main.js`) |
-| `npm run lint` | Lint + fix auto |
+| `npm run lint` | Vérifie le lint sans modifier les fichiers |
+| `npm run lint:fix` | Corrige automatiquement les problèmes de lint corrigeables |
 | `npm test` | Tests unitaires |
 | `npm run test:e2e` | Tests end-to-end |
 
