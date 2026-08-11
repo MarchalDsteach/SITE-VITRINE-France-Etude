@@ -69,3 +69,35 @@ L'API démarre sur `http://localhost:3001`. Health check : `http://localhost:300
 3. **Revérifier la signature webhook CinetPay contre leur doc officielle avant toute mise en prod** (voir avertissement ci-dessus)
 4. Déployer sur Railway + connecter `api.votredomaine.com` (voir guide infra)
 5. Brancher Sentry (voir guide monitoring)
+
+## Développement local (rapide)
+
+1. Copier l'exemple d'environnement:
+
+   cp .env.example .env
+
+   Remplir `.env` (mettre DATABASE_URL et autres clés locales de test si besoin).
+
+2. Démarrer la base PostgreSQL locale avec Docker:
+
+   docker-compose up -d
+
+3. Installer les dépendances et générer le client Prisma:
+
+   npm ci
+   npx prisma generate
+   npx prisma db push --accept-data-loss
+
+4. Compiler (optionnel) et démarrer en mode développement (watch):
+
+   npm run build
+   npm run start:dev
+
+5. Tests:
+
+   npm test
+   npm run test:e2e
+
+Notes:
+- Ne commitez jamais `.env` contenant des clés réelles. Utilisez `.env.example` pour partager les variables attendues.
+- Pour la production, utilisez des secrets / services managés (Railway, Heroku, AWS RDS...), et gérez les migrations via `prisma migrate`.
