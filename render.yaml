@@ -4,14 +4,10 @@ services:
     runtime: node
     rootDir: api
     region: frankfurt
-    plan: starter
+    plan: free
     buildCommand: npm ci && npx prisma generate && npm run build
     startCommand: npx prisma migrate deploy && npm run start:prod
     healthCheckPath: /api
-    disk:
-      name: uploaded-documents
-      mountPath: /var/data
-      sizeGB: 1
     envVars:
       - key: DATABASE_URL
         fromDatabase:
@@ -22,10 +18,20 @@ services:
       - key: ADMIN_BOOTSTRAP_SECRET
         generateValue: true
       - key: UPLOADS_DIR
-        value: /var/data/uploads
+        value: /tmp/uploads
       - key: FRONTEND_URL
         sync: false
       - key: FRONTEND_ORIGINS
+        sync: false
+      - key: SMTP_HOST
+        sync: false
+      - key: SMTP_PORT
+        sync: false
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASS
+        sync: false
+      - key: SMTP_FROM
         sync: false
 
 databases:
@@ -33,4 +39,4 @@ databases:
     databaseName: plateforme_etudiante
     user: gpi_app
     region: frankfurt
-    plan: basic-1gb
+    plan: free

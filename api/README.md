@@ -65,38 +65,58 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## Deployment (Vercel + Render)
+## Free preview deployment (Vercel + Render)
 
-The repository root contains `render.yaml`, which defines the API, a managed Render
-Postgres database, and a persistent disk for uploaded documents. Its paid plans can
-incur charges as soon as the Blueprint is created; review the current price in Render
-before confirming. Do not use a free database for production data.
+The repository root contains `render.yaml`, configured for Render's free web service
+and free PostgreSQL database. This is only for a temporary preview and online testing,
+not production or real customer/student data:
 
-1. Push this repository to the Git provider connected to Render and Vercel.
-2. In Render, create a Blueprint from the repository root and review the services,
-   region, plans, and estimated charges before applying it. The Blueprint generates
-   `JWT_SECRET` and `ADMIN_BOOTSTRAP_SECRET`; keep both private.
-3. Deploy the frontend on Vercel with `frontend` as its Root Directory and set
-   `NEXT_PUBLIC_API_URL` to the deployed API URL followed by `/api`.
-4. Set Render's `FRONTEND_URL` to the Vercel site URL and `FRONTEND_ORIGINS` to the
-   exact allowed frontend origin(s), comma-separated. Set `SMTP_HOST`, `SMTP_PORT`,
-   `SMTP_USER`, `SMTP_PASS`, and `SMTP_FROM` in Render to enable verification and
-   password-reset emails.
-5. Confirm the API health endpoint (`/api`), sign-up/email delivery, login, protected
-   admin APIs, and document upload/download after deployment.
+- Render free web services can sleep after inactivity, so the first request may take
+  about a minute to wake the API.
+- Render free PostgreSQL expires after 30 days, has no managed backups, and is
+  deleted after its additional 14-day upgrade grace period. Export and migrate any
+  data manually before expiry; do not assume the free database is permanent.
+- Uploaded documents are written under `/tmp/uploads` on the API's ephemeral
+  filesystem and can disappear whenever the service restarts, sleeps, or redeploys.
+  Do not upload real identity, immigration, or other sensitive documents on this
+  preview. A paid persistent disk or external object storage is required for durable
+  documents.
+- Render's free web services cannot send outbound SMTP on ports 25, 465, or 587.
+  Account verification and password-reset mail require an SMTP provider/port allowed
+  by Render; without working mail, new student registration will fail. Test email
+  delivery before inviting testers.
+- Vercel Hobby is free only for personal, non-commercial use. Check Vercel's current
+  terms and plan before using the site for a business.
 
-The Render disk is mounted at `/var/data`; `UPLOADS_DIR` points document uploads
-there so they survive API restarts and deployments. The database remains hosted on
-Render; local `.env` files are not used in production.
+To deploy the preview:
 
-The administrator console is available at `/gestion` (with sections such as
-`/gestion/utilisateurs`). This is a friendly route, not a secret: the frontend checks
-the stored admin role and the API enforces administrator authorization independently.
-Create the first administrator once with `POST /api/auth/create-admin`, providing
-the intended admin's email and password plus the private `ADMIN_BOOTSTRAP_SECRET`.
-Do not register that email first: the bootstrap endpoint creates an active,
-email-verified administrator directly. After creation, remove or rotate the bootstrap
-secret in Render.
+1. In Vercel, import the repository, set the Root Directory to `frontend`, and deploy
+   the first preview. Vercel Hobby is appropriate only if the project meets its
+   non-commercial terms.
+2. In Render, create a Blueprint from this repository and review that both services
+   show the `free` plan before confirming. The Blueprint generates `JWT_SECRET` and
+   `ADMIN_BOOTSTRAP_SECRET`; enter the Vercel preview's public URL for `FRONTEND_URL`
+   and the exact same origin for `FRONTEND_ORIGINS`. Configure SMTP values only if
+   using an SMTP provider and port reachable from the free Render service.
+3. Set Vercel's `NEXT_PUBLIC_API_URL` to the deployed Render API URL followed by
+   `/api`, then redeploy the frontend so the public API URL is included in its build.
+4. Check the Render API health endpoint (`/api`), create the first administrator,
+   sign in at `/gestion`, and check administrator API access before testing other
+   flows. The first admin is created once with `POST /api/auth/create-admin`, using
+   the admin's email/password and the private `ADMIN_BOOTSTRAP_SECRET`; do not
+   register that email first. Remove or rotate the bootstrap secret after creation.
+5. Test email delivery before relying on registration/password reset. Test document
+   upload/download only with disposable sample files. Confirm the data is in Render,
+   not your computer.
+
+The administrator console is available at `/gestion` (including paths such as
+`/gestion/utilisateurs`). The path is not a password: the frontend checks the stored
+admin role, and the API independently enforces administrator authorization.
+
+When the owner is ready to pay for durable production hosting, change Render to a
+paid database and API plan and add persistent or object storage for documents. Back
+up and migrate the preview database before it expires; changing a plan alone does not
+make ephemeral uploaded files durable.
 
 For local development, start services with `docker compose up -d postgres mailpit`.
 For production migration details, see the [NestJS deployment documentation](https://docs.nestjs.com/deployment).
