@@ -1,0 +1,5 @@
+-- CreateEnum
+CREATE TYPE "OfferType" AS ENUM ('ALTERNANCE', 'INTERNSHIP', 'STUDENT_JOB');
+
+-- AlterTable
+ALTER TABLE "Offer" ADD COLUMN "type" "OfferType" NOT NULL DEFAULT 'ALTERNANCE';

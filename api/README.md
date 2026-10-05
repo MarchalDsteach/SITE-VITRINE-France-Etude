@@ -31,6 +31,14 @@
 $ npm install
 ```
 
+## Account email flows
+
+Registration verification and password reset links use SMTP. For local development, start the inbox with `docker compose up -d mailpit` and open `http://localhost:8025`. If Docker Desktop is unavailable, run `npx --yes maildev --smtp 1025 --web 8025` and use the SMTP defaults in `.env.example`. In production, provide the SMTP server's host, port, sender, optional credentials, and the public `FRONTEND_URL`. Apply database migrations with `npx prisma migrate deploy` and regenerate Prisma Client with `npx prisma generate` after schema changes.
+
+## Administrator bootstrap
+
+Public registration always creates a student account that must verify its email and be approved by an administrator. Administrator accounts can only be bootstrapped through `POST /api/auth/create-admin` when `ADMIN_BOOTSTRAP_SECRET` is configured in the API environment. The secret has no fallback value and must never be included in frontend code or public forms.
+
 ## Compile and run the project
 
 ```bash
@@ -57,16 +65,39 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## Deployment
+## Deployment (Vercel + Render)
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
+The repository root contains `render.yaml`, which defines the API, a managed Render
+Postgres database, and a persistent disk for uploaded documents. Its paid plans can
+incur charges as soon as the Blueprint is created; review the current price in Render
+before confirming. Do not use a free database for production data.
 
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+1. Push this repository to the Git provider connected to Render and Vercel.
+2. In Render, create a Blueprint from the repository root and review the services,
+   region, plans, and estimated charges before applying it. The Blueprint generates
+   `JWT_SECRET` and `ADMIN_BOOTSTRAP_SECRET`; keep both private.
+3. Deploy the frontend on Vercel with `frontend` as its Root Directory and set
+   `NEXT_PUBLIC_API_URL` to the deployed API URL followed by `/api`.
+4. Set Render's `FRONTEND_URL` to the Vercel site URL and `FRONTEND_ORIGINS` to the
+   exact allowed frontend origin(s), comma-separated. Set `SMTP_HOST`, `SMTP_PORT`,
+   `SMTP_USER`, `SMTP_PASS`, and `SMTP_FROM` in Render to enable verification and
+   password-reset emails.
+5. Confirm the API health endpoint (`/api`), sign-up/email delivery, login, protected
+   admin APIs, and document upload/download after deployment.
 
-```bash
-$ npm install -g @nestjs/mau
-$ mau deploy
-```
+The Render disk is mounted at `/var/data`; `UPLOADS_DIR` points document uploads
+there so they survive API restarts and deployments. The database remains hosted on
+Render; local `.env` files are not used in production.
+
+The administrator console is available at `/gestion` (with sections such as
+`/gestion/utilisateurs`). This is a friendly route, not a secret: the frontend checks
+the stored admin role and the API enforces administrator authorization independently.
+Register a normal account, verify its email, then bootstrap the first administrator
+once using `POST /api/auth/create-admin` and the private `ADMIN_BOOTSTRAP_SECRET`.
+After creating the admin account, remove or rotate that bootstrap secret in Render.
+
+For local development, start services with `docker compose up -d postgres mailpit`.
+For production migration details, see the [NestJS deployment documentation](https://docs.nestjs.com/deployment).
 
 With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
 

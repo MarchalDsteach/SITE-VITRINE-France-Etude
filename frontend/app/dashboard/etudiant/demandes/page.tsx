@@ -1,68 +1,72 @@
-'use client'
-import { useEffect, useState } from 'react'
-import { applications } from '@/lib/api'
+"use client";
 
-const statusLabel: any = {
-  PENDING: { label: 'En attente', class: 'bg-amber-50 text-amber-700' },
-  PROCESSING: { label: 'En cours', class: 'bg-blue-50 text-blue-700' },
-  DELIVERED: { label: 'Livré', class: 'bg-green-50 text-green-700' },
-  REJECTED: { label: 'Rejeté', class: 'bg-red-50 text-red-700' },
-}
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import { api, Application } from "@/lib/api";
 
 export default function DemandesPage() {
-  const [dossiers, setDossiers] = useState([])
-  const [loading, setLoading] = useState(true)
+  const [applications, setApplications] = useState<Application[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
 
   useEffect(() => {
-    applications.list()
-      .then(res => setDossiers(res.data))
-      .catch(() => {})
-      .finally(() => setLoading(false))
-  }, [])
+    api
+      .get<Application[]>("/applications")
+      .then(setApplications)
+      .catch((err) => setError(err.message))
+      .finally(() => setLoading(false));
+  }, []);
 
   return (
     <div>
-      <div className="mb-6">
-        <h1 className="text-xl font-semibold text-[#0f1e3c]">Mes demandes</h1>
-        <p className="text-gray-400 text-sm mt-1">Suivez l'état de tous vos dossiers</p>
+      <div className="flex items-center justify-between">
+        <div>
+          <h1 className="text-2xl font-semibold text-slate-900">
+            Mes demandes
+          </h1>
+          <p className="text-sm text-slate-500 mt-1">
+            Suivez le statut de vos candidatures
+          </p>
+        </div>
+        <Link
+          href="/dashboard/etudiant/nouveau"
+          className="rounded-md bg-blue-700 hover:bg-blue-800 text-white text-sm font-medium px-4 py-2"
+        >
+          Nouvelle demande
+        </Link>
       </div>
 
-      <div className="bg-white rounded-xl border border-gray-100 overflow-hidden">
+      {error && (
+        <div className="mt-4 rounded-md bg-red-50 border border-red-200 px-4 py-3 text-sm text-red-700">
+          {error}
+        </div>
+      )}
+
+      <div className="mt-6 bg-white rounded-lg border border-slate-200 overflow-hidden">
         {loading ? (
-          <div className="p-8 text-center text-gray-400 text-sm">Chargement...</div>
-        ) : dossiers.length === 0 ? (
-          <div className="p-8 text-center">
-            <div className="text-4xl mb-3">📂</div>
-            <div className="text-gray-500 font-medium mb-1">Aucune demande</div>
-            <div className="text-gray-400 text-sm">Vous n'avez pas encore soumis de dossier</div>
-            <a href="/dashboard/etudiant/nouveau" className="mt-4 inline-block bg-[#C9962B] text-white text-sm px-5 py-2.5 rounded-lg hover:bg-[#b8852a] transition-colors">
-              Créer une demande
-            </a>
-          </div>
+          <p className="p-6 text-sm text-slate-500">Chargement...</p>
+        ) : applications.length === 0 ? (
+          <p className="p-6 text-sm text-slate-500">
+            Aucune demande pour le moment.
+          </p>
         ) : (
           <table className="w-full text-sm">
-            <thead>
-              <tr className="border-b border-gray-100 bg-gray-50">
-                <th className="text-left px-6 py-3 text-xs text-gray-400 font-medium">TYPE</th>
-                <th className="text-left px-6 py-3 text-xs text-gray-400 font-medium">STATUT</th>
-                <th className="text-left px-6 py-3 text-xs text-gray-400 font-medium">DATE</th>
-                <th className="text-left px-6 py-3 text-xs text-gray-400 font-medium">ACTION</th>
+            <thead className="bg-slate-50 text-slate-500 text-xs uppercase">
+              <tr>
+                <th className="text-left px-6 py-3 font-medium">Programme</th>
+                <th className="text-left px-6 py-3 font-medium">Statut</th>
+                <th className="text-left px-6 py-3 font-medium">Créée le</th>
               </tr>
             </thead>
-            <tbody>
-              {dossiers.map((d: any) => (
-                <tr key={d.id} className="border-b border-gray-50 hover:bg-gray-50 transition-colors">
-                  <td className="px-6 py-4 font-medium text-[#0f1e3c]">{d.type.replace('_', ' ')}</td>
+            <tbody className="divide-y divide-slate-100">
+              {applications.map((app) => (
+                <tr key={app.id} className="hover:bg-slate-50">
+                  <td className="px-6 py-4 text-slate-800">{app.program}</td>
                   <td className="px-6 py-4">
-                    <span className={`px-3 py-1 rounded-full text-xs font-medium ${statusLabel[d.status]?.class}`}>
-                      {statusLabel[d.status]?.label || d.status}
-                    </span>
+                    <StatusBadge status={app.status} />
                   </td>
-                  <td className="px-6 py-4 text-gray-400">
-                    {new Date(d.createdAt).toLocaleDateString('fr-FR')}
-                  </td>
-                  <td className="px-6 py-4">
-                    <button className="text-[#C9962B] text-xs hover:underline">Voir détails</button>
+                  <td className="px-6 py-4 text-slate-500">
+                    {new Date(app.createdAt).toLocaleDateString("fr-FR")}
                   </td>
                 </tr>
               ))}
@@ -71,5 +75,27 @@ export default function DemandesPage() {
         )}
       </div>
     </div>
-  )
+  );
+}
+
+function StatusBadge({ status }: { status: Application["status"] }) {
+  const styles: Record<Application["status"], string> = {
+    DRAFT: "bg-slate-100 text-slate-700",
+    SUBMITTED: "bg-blue-50 text-blue-700",
+    IN_REVIEW: "bg-amber-50 text-amber-700",
+    ACCEPTED: "bg-green-50 text-green-700",
+    REJECTED: "bg-red-50 text-red-700",
+  };
+  const labels: Record<Application["status"], string> = {
+    DRAFT: "Brouillon",
+    SUBMITTED: "Envoyée",
+    IN_REVIEW: "En révision",
+    ACCEPTED: "Acceptée",
+    REJECTED: "Refusée",
+  };
+  return (
+    <span className={`px-2 py-1 rounded-full text-xs font-medium ${styles[status]}`}>
+      {labels[status]}
+    </span>
+  );
 }

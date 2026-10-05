@@ -1,145 +1,17 @@
-'use client'
-import { useEffect, useState } from 'react'
-import { useRouter } from 'next/navigation'
-import { applications } from '@/lib/api'
+"use client";
 
-export default function DashboardEtudiant() {
-  const router = useRouter()
-  const [user, setUser] = useState<any>(null)
-  const [dossiers, setDossiers] = useState([])
-  const [loading, setLoading] = useState(true)
+import Link from "next/link";
+import { useEffect, useMemo, useState } from "react";
+import { api, Application, getApplicationTitle, getCurrentUser } from "@/lib/api";
 
-  useEffect(() => {
-    const u = localStorage.getItem('user')
-    const token = localStorage.getItem('token')
-    if (!token) { router.push('/login'); return }
-    if (u) setUser(JSON.parse(u))
-    applications.list()
-      .then(res => setDossiers(res.data))
-      .catch(() => {})
-      .finally(() => setLoading(false))
-  }, [])
+const labels: Record<string, string> = { DRAFT: "Brouillon", SUBMITTED: "Dossier envoyé", PAYMENT_PENDING: "Paiement requis", PAID: "Paiement confirmé", IN_REVIEW: "En étude", APPROVED: "Acceptée", DELIVERED: "Terminée", REJECTED: "À revoir", CANCELLED: "Annulée" };
+const colors: Record<string, string> = { DRAFT: "bg-slate-100 text-slate-700", SUBMITTED: "bg-blue-100 text-blue-800", PAYMENT_PENDING: "bg-orange-100 text-orange-800", IN_REVIEW: "bg-amber-100 text-amber-800", APPROVED: "bg-emerald-100 text-emerald-800", DELIVERED: "bg-emerald-100 text-emerald-800", REJECTED: "bg-red-100 text-red-800" };
 
-  return (
-    <div className="min-h-screen bg-[#f5f3ee]">
-      {/* Header */}
-      <div className="bg-[#0f1e3c] px-6 py-4 flex items-center justify-between">
-        <img src="/logo.png" alt="GPI" className="h-10 object-contain" />
-        <div className="flex items-center gap-4">
-          <span className="text-white/70 text-sm">
-            {user?.firstName} {user?.lastName}
-          </span>
-          <button
-            onClick={() => { localStorage.clear(); router.push('/login') }}
-            className="text-sm text-white/50 hover:text-white transition-colors"
-          >
-            Déconnexion
-          </button>
-        </div>
-      </div>
-
-      <div className="max-w-4xl mx-auto px-6 py-8">
-        {/* Bienvenue */}
-        <div className="mb-8">
-          <h1 className="text-2xl font-semibold text-[#0f1e3c]">
-            Bonjour, {user?.firstName} 👋
-          </h1>
-          <p className="text-gray-500 text-sm mt-1">
-            Bienvenue sur votre espace étudiant GPI
-          </p>
-        </div>
-
-        {/* Stats */}
-        <div className="grid grid-cols-3 gap-4 mb-8">
-          <div className="bg-white rounded-xl p-5 border border-gray-100">
-            <div className="text-2xl font-semibold text-[#0f1e3c]">{dossiers.length}</div>
-            <div className="text-sm text-gray-500 mt-1">Dossiers créés</div>
-          </div>
-          <div className="bg-white rounded-xl p-5 border border-gray-100">
-            <div className="text-2xl font-semibold text-green-600">
-              {dossiers.filter((d: any) => d.status === 'DELIVERED').length}
-            </div>
-            <div className="text-sm text-gray-500 mt-1">Dossiers livrés</div>
-          </div>
-          <div className="bg-white rounded-xl p-5 border border-gray-100">
-            <div className="text-2xl font-semibold text-[#C9962B]">
-              {dossiers.filter((d: any) => d.status === 'PENDING').length}
-            </div>
-            <div className="text-sm text-gray-500 mt-1">En attente</div>
-          </div>
-        </div>
-
-        {/* Mes dossiers */}
-        <div className="bg-white rounded-xl border border-gray-100 overflow-hidden mb-8">
-          <div className="px-6 py-4 border-b border-gray-100 flex items-center justify-between">
-            <h2 className="font-medium text-[#0f1e3c]">Mes dossiers</h2>
-            <button
-              onClick={() => router.push('/dashboard/etudiant/nouveau')}
-              className="bg-[#C9962B] text-white text-sm px-4 py-2 rounded-lg hover:bg-[#b8852a] transition-colors"
-            >
-              + Nouveau dossier
-            </button>
-          </div>
-
-          {loading ? (
-            <div className="px-6 py-8 text-center text-gray-400 text-sm">Chargement...</div>
-          ) : dossiers.length === 0 ? (
-            <div className="px-6 py-8 text-center">
-              <div className="text-gray-400 text-sm mb-3">Vous n'avez pas encore de dossier</div>
-              <button
-                onClick={() => router.push('/dashboard/etudiant/nouveau')}
-                className="text-[#C9962B] text-sm font-medium hover:underline"
-              >
-                Créer mon premier dossier →
-              </button>
-            </div>
-          ) : (
-            <table className="w-full text-sm">
-              <thead>
-                <tr className="border-b border-gray-100">
-                  <th className="text-left px-6 py-3 text-xs text-gray-400 font-normal">TYPE</th>
-                  <th className="text-left px-6 py-3 text-xs text-gray-400 font-normal">STATUT</th>
-                  <th className="text-left px-6 py-3 text-xs text-gray-400 font-normal">DATE</th>
-                </tr>
-              </thead>
-              <tbody>
-                {dossiers.map((d: any) => (
-                  <tr key={d.id} className="border-b border-gray-50 hover:bg-gray-50">
-                    <td className="px-6 py-4 font-medium text-[#0f1e3c]">{d.type}</td>
-                    <td className="px-6 py-4">
-                      <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                        d.status === 'DELIVERED' ? 'bg-green-50 text-green-700' :
-                        d.status === 'PENDING' ? 'bg-amber-50 text-amber-700' :
-                        'bg-blue-50 text-blue-700'
-                      }`}>
-                        {d.status}
-                      </span>
-                    </td>
-                    <td className="px-6 py-4 text-gray-400">
-                      {new Date(d.createdAt).toLocaleDateString('fr-FR')}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          )}
-        </div>
-
-        {/* Services disponibles */}
-        <div className="bg-white rounded-xl border border-gray-100 overflow-hidden">
-          <div className="px-6 py-4 border-b border-gray-100">
-            <h2 className="font-medium text-[#0f1e3c]">Services disponibles</h2>
-          </div>
-          <div className="grid grid-cols-3 gap-4 p-6">
-            {['AVI', 'ADL', 'CAMPUS_FRANCE'].map((service) => (
-              <div key={service} className="border border-gray-100 rounded-xl p-4 hover:border-[#C9962B] transition-colors cursor-pointer">
-                <div className="font-medium text-[#0f1e3c] text-sm mb-1">{service.replace('_', ' ')}</div>
-                <div className="text-xs text-gray-400">Faire une demande</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
-  )
+export default function StudentHomePage() {
+  const [applications, setApplications] = useState<Application[]>([]); const [loading, setLoading] = useState(true); const [error, setError] = useState("");
+  const user = getCurrentUser();
+  useEffect(() => { api.get<Application[]>("/applications").then(setApplications).catch((reason: Error) => setError(reason.message)).finally(() => setLoading(false)); }, []);
+  const stats = useMemo(() => ({ total: applications.length, active: applications.filter((item) => ["SUBMITTED", "IN_REVIEW", "PAYMENT_PENDING", "PAID"].includes(item.status)).length, complete: applications.filter((item) => ["APPROVED", "DELIVERED"].includes(item.status)).length }), [applications]);
+  return <div className="mx-auto max-w-6xl"><div className="flex flex-wrap items-start justify-between gap-5"><div><p className="text-sm font-semibold uppercase tracking-[0.16em] text-amber-700">Espace étudiant</p><h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">Bonjour{user?.firstName ? `, ${user.firstName}` : ""}.</h1><p className="mt-2 text-slate-600">Suivez vos démarches et avancez sereinement vers votre projet international.</p></div><Link href="/dashboard/etudiant/nouveau" className="rounded-xl bg-slate-950 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-slate-950/15 hover:bg-slate-800">+ Nouvelle demande</Link></div>{error && <p className="mt-7 rounded-2xl border border-red-200 bg-red-50 px-5 py-4 text-sm text-red-700">{error}</p>}<section className="mt-8 grid gap-4 sm:grid-cols-3"><Metric number={stats.total} label="Démarches créées" /><Metric number={stats.active} label="Dossiers en cours" accent /><Metric number={stats.complete} label="Étapes finalisées" /></section><section className="mt-8 grid gap-6 lg:grid-cols-[1.45fr_0.85fr]"><div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200"><div className="flex items-center justify-between"><div><h2 className="text-lg font-bold text-slate-950">Vos dernières démarches</h2><p className="mt-1 text-sm text-slate-500">Le suivi de vos dossiers en un coup d’œil.</p></div><Link href="/dashboard/etudiant/demandes" className="text-sm font-semibold text-amber-700 hover:text-amber-800">Voir tout</Link></div>{loading ? <p className="py-12 text-sm text-slate-500">Chargement de vos démarches…</p> : applications.length === 0 ? <div className="mt-6 rounded-2xl border border-dashed border-slate-300 bg-stone-50 p-8"><p className="font-semibold text-slate-800">Votre espace est prêt.</p><p className="mt-1 text-sm text-slate-500">Commencez par créer votre première demande d’accompagnement.</p><Link href="/dashboard/etudiant/nouveau" className="mt-5 inline-block text-sm font-semibold text-amber-700">Démarrer une demande →</Link></div> : <div className="mt-5 divide-y divide-slate-100">{applications.slice(0, 4).map((item) => <article key={item.id} className="flex flex-wrap items-center justify-between gap-3 py-4"><div><p className="font-semibold text-slate-900">{getApplicationTitle(item)}</p><p className="mt-1 text-xs text-slate-500">Réf. {item.reference} · Créée le {new Date(item.createdAt).toLocaleDateString("fr-FR")}</p></div><span className={`rounded-full px-3 py-1.5 text-xs font-semibold ${colors[item.status] || "bg-slate-100 text-slate-700"}`}>{labels[item.status] || item.status}</span></article>)}</div>}</div><div className="rounded-2xl bg-slate-950 p-6 text-white"><p className="text-sm font-semibold text-amber-400">Prochaine étape</p><h2 className="mt-3 text-xl font-bold">Préparez votre projet à votre rythme.</h2><p className="mt-3 text-sm leading-6 text-slate-300">Retrouvez vos documents, paiements et opportunités dans un seul espace.</p><div className="mt-6 space-y-2"><Link href="/dashboard/etudiant/documents" className="block rounded-xl bg-white/10 px-4 py-3 text-sm font-semibold hover:bg-white/15">Gérer mes documents</Link><Link href="/offres" className="block rounded-xl border border-white/15 px-4 py-3 text-sm font-semibold text-white hover:bg-white/10">Découvrir les opportunités</Link></div></div></section></div>;
 }
+function Metric({ number, label, accent = false }: { number: number; label: string; accent?: boolean }) { return <div className={`rounded-2xl p-5 ring-1 ${accent ? "bg-amber-50 ring-amber-200" : "bg-white ring-slate-200"}`}><p className="text-3xl font-bold text-slate-950">{number}</p><p className="mt-1 text-sm text-slate-600">{label}</p></div>; }
