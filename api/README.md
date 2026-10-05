@@ -92,9 +92,11 @@ Render; local `.env` files are not used in production.
 The administrator console is available at `/gestion` (with sections such as
 `/gestion/utilisateurs`). This is a friendly route, not a secret: the frontend checks
 the stored admin role and the API enforces administrator authorization independently.
-Register a normal account, verify its email, then bootstrap the first administrator
-once using `POST /api/auth/create-admin` and the private `ADMIN_BOOTSTRAP_SECRET`.
-After creating the admin account, remove or rotate that bootstrap secret in Render.
+Create the first administrator once with `POST /api/auth/create-admin`, providing
+the intended admin's email and password plus the private `ADMIN_BOOTSTRAP_SECRET`.
+Do not register that email first: the bootstrap endpoint creates an active,
+email-verified administrator directly. After creation, remove or rotate the bootstrap
+secret in Render.
 
 For local development, start services with `docker compose up -d postgres mailpit`.
 For production migration details, see the [NestJS deployment documentation](https://docs.nestjs.com/deployment).
