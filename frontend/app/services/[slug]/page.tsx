@@ -10,11 +10,16 @@ export function generateStaticParams() {
   return Object.keys(SERVICES).map((slug) => ({ slug }));
 }
 
-export default function ServiceDetailPage({ params }: { params: { slug: string } }) {
-  const service = SERVICES[params.slug];
+export default async function ServiceDetailPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const service = SERVICES[slug];
   if (!service) notFound();
 
-  if (params.slug === "verificateur") {
+  if (slug === "verificateur") {
     return (
       <>
         <PageHero crumb={`Services / ${service.name}`} eyebrow={service.badge} title={service.name} subtitle={service.short} />

@@ -46,8 +46,13 @@ export function generateStaticParams() {
   return Object.keys(LEGAL).map((type) => ({ type }));
 }
 
-export default function LegalPage({ params }: { params: { type: string } }) {
-  const page = LEGAL[params.type];
+export default async function LegalPage({
+  params,
+}: {
+  params: Promise<{ type: string }>;
+}) {
+  const { type } = await params;
+  const page = LEGAL[type];
   if (!page) notFound();
 
   return (
