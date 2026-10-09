@@ -19,7 +19,6 @@ const NAV = [
 const MOBILE_EXTRA = [
   { href: "/mediatheque", label: "Médiathèque" },
   { href: "/temoignages", label: "Témoignages" },
-  { href: "/espace", label: "Espace étudiant" },
 ];
 
 function ChevronDown() {
