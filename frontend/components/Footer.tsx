@@ -8,8 +8,7 @@ import { showToast } from "@/lib/toast";
 export default function Footer() {
   function onSubscribe(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    showToast("Merci pour votre inscription à la newsletter ✓");
-    e.currentTarget.reset();
+    showToast("L’inscription à la newsletter n’est pas encore disponible.");
   }
 
   return (
