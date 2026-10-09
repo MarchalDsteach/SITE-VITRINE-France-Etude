@@ -1,6 +1,10 @@
 // ⚠️ Adapte NEXT_PUBLIC_API_URL dans ton .env.local (ou remplace directement l'URL ci-dessous)
 const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001/api";
 
+export function apiUrl(path: string): string {
+  return `${API_URL}${path}`;
+}
+
 function getToken(): string | null {
   if (typeof window === "undefined") return null;
   return localStorage.getItem("token");
@@ -37,7 +41,7 @@ async function request<T>(
   const token = getToken();
   const isFormData = typeof FormData !== "undefined" && options.body instanceof FormData;
 
-  const res = await fetch(`${API_URL}${path}`, {
+  const res = await fetch(apiUrl(path), {
     ...options,
     headers: {
       ...(!isFormData ? { "Content-Type": "application/json" } : {}),
@@ -59,6 +63,13 @@ async function request<T>(
 
   if (res.status === 204) return null as T;
   return res.json();
+}
+
+export function apiRequest<T>(
+  path: string,
+  options: RequestInit = {}
+): Promise<T> {
+  return request<T>(path, options);
 }
 
 export const api = {
