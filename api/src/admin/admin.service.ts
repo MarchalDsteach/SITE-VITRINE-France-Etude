@@ -153,7 +153,10 @@ export class AdminService {
     }
     return this.prisma.user.update({
       where: { id: userId },
-      data: { status },
+      data: {
+        status,
+        ...(status === 'ACTIVE' ? { emailVerified: true } : {}),
+      },
       select: {
         id: true,
         email: true,

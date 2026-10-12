@@ -115,7 +115,7 @@ export default function RegisterPage() {
             </label>
 
             <button type="submit" disabled={loading} className="btn btn-primary w-full disabled:cursor-not-allowed disabled:opacity-60">
-              {loading ? 'Création...' : "Créer mon compte"}
+              {loading ? 'Création… le serveur peut mettre une minute à répondre' : "Créer mon compte"}
             </button>
           </form>
 

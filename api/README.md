@@ -33,11 +33,11 @@ $ npm install
 
 ## Account email flows
 
-Registration verification and password reset links use SMTP. For local development, start the inbox with `docker compose up -d mailpit` and open `http://localhost:8025`. If Docker Desktop is unavailable, run `npx --yes maildev --smtp 1025 --web 8025` and use the SMTP defaults in `.env.example`. In production, provide the SMTP server's host, port, sender, optional credentials, and the public `FRONTEND_URL`. Apply database migrations with `npx prisma migrate deploy` and regenerate Prisma Client with `npx prisma generate` after schema changes.
+Registration verification and password reset links use SMTP. If verification mail is unavailable during student registration, the account is kept in `PENDING` and the response tells the student that an administrator must review it; activating that account in the admin console also confirms its email address. Password reset still requires working SMTP. For local development, start the inbox with `docker compose up -d mailpit` and open `http://localhost:8025`. If Docker Desktop is unavailable, run `npx --yes maildev --smtp 1025 --web 8025` and use the SMTP defaults in `.env.example`. In production, provide the SMTP server's host, port, sender, optional credentials, and the public `FRONTEND_URL`. Apply database migrations with `npx prisma migrate deploy` and regenerate Prisma Client with `npx prisma generate` after schema changes.
 
 ## Administrator bootstrap
 
-Public registration always creates a student account that must verify its email and be approved by an administrator. Administrator accounts can only be bootstrapped through `POST /api/auth/create-admin` when `ADMIN_BOOTSTRAP_SECRET` is configured in the API environment. The secret has no fallback value and must never be included in frontend code or public forms.
+Public registration always creates a student account that must be approved by an administrator. When verification mail is available, the student must also verify their email; when mail cannot be sent, administrator approval confirms the email address. Administrator accounts can only be bootstrapped through `POST /api/auth/create-admin` when `ADMIN_BOOTSTRAP_SECRET` is configured in the API environment. The secret has no fallback value and must never be included in frontend code or public forms.
 
 ## Compile and run the project
 
@@ -82,9 +82,8 @@ not production or real customer/student data:
   preview. A paid persistent disk or external object storage is required for durable
   documents.
 - Render's free web services cannot send outbound SMTP on ports 25, 465, or 587.
-  Account verification and password-reset mail require an SMTP provider/port allowed
-  by Render; without working mail, new student registration will fail. Test email
-  delivery before inviting testers.
+  Without working verification mail, new students remain pending until an
+  administrator approves them; password-reset links still require working SMTP.
 - Vercel Hobby is free only for personal, non-commercial use. Check Vercel's current
   terms and plan before using the site for a business.
 

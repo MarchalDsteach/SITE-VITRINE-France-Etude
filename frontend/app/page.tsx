@@ -18,7 +18,7 @@ export default function HomePage() {
   const rest = services.slice(1);
 
   return (
-    <>
+    <main className="home-page">
       <section className="relative overflow-hidden py-20 pb-16">
         <div
           className="absolute inset-0"
@@ -178,6 +178,6 @@ export default function HomePage() {
           </Reveal>
         </div>
       </section>
-    </>
+    </main>
   );
 }

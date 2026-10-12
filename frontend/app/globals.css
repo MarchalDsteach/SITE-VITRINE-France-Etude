@@ -62,6 +62,7 @@ body{
   -webkit-font-smoothing:antialiased;
 }
 h1,h2,h3,h4{font-family:var(--font-fraunces),serif;font-weight:600;letter-spacing:-0.015em;color:var(--ink);}
+.home-page :is(h1,h2,h3,h4).text-white{color:#fff;}
 
 @layer components{
   .container-gpi{ @apply max-w-[1240px] mx-auto px-6; }

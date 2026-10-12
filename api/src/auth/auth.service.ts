@@ -2,6 +2,7 @@ import {
   BadRequestException,
   ConflictException,
   Injectable,
+  Logger,
   UnauthorizedException,
 } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
@@ -17,6 +18,8 @@ import { UpdateProfileDto } from './dto/update-profile.dto';
 
 @Injectable()
 export class AuthService {
+  private readonly logger = new Logger(AuthService.name);
+
   constructor(
     private readonly prisma: PrismaService,
     private readonly jwt: JwtService,
@@ -54,14 +57,26 @@ export class AuthService {
         `${user.firstName} ${user.lastName}`,
         rawToken,
       );
-    } catch (error) {
-      await this.prisma.user.delete({ where: { id: user.id } });
-      throw error;
+      return {
+        message:
+          'Compte créé. Consultez votre email pour vérifier votre adresse, puis attendez la validation administrative.',
+      };
+    } catch {
+      await this.prisma.user.update({
+        where: { id: user.id },
+        data: {
+          emailVerificationTokenHash: null,
+          emailVerificationExpiresAt: null,
+        },
+      });
+      this.logger.warn(
+        'Verification email could not be sent; the student account remains pending manual approval.',
+      );
+      return {
+        message:
+          'Compte créé, mais la vérification par email est indisponible. Votre compte est en attente de validation manuelle par l’équipe GPI.',
+      };
     }
-    return {
-      message:
-        'Compte créé. Consultez votre email pour vérifier votre adresse, puis attendez la validation administrative.',
-    };
   }
 
   async login(dto: LoginDto) {
@@ -71,14 +86,17 @@ export class AuthService {
     if (!user || !(await bcrypt.compare(dto.password, user.passwordHash))) {
       throw new UnauthorizedException('Email ou mot de passe incorrect.');
     }
-    if (!user.emailVerified) {
+    if (user.status === 'PENDING') {
       throw new UnauthorizedException(
-        'Vérifiez votre adresse email avant de vous connecter.',
+        'Votre compte est en attente de validation par l’administrateur.',
       );
     }
     if (user.status !== 'ACTIVE') {
+      throw new UnauthorizedException('Votre compte n’est pas actif.');
+    }
+    if (!user.emailVerified) {
       throw new UnauthorizedException(
-        'Votre compte est en attente de validation par l’administrateur.',
+        'Vérifiez votre adresse email avant de vous connecter.',
       );
     }
     return this.createSession(user);

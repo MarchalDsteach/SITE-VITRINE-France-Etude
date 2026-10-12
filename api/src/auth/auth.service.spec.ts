@@ -1,5 +1,8 @@
 import { createHash } from 'crypto';
+import { JwtService } from '@nestjs/jwt';
 import { AuthService } from './auth.service';
+import { PrismaService } from '../prisma/prisma.service';
+import { MailService } from './mail.service';
 
 describe('AuthService.createAdmin', () => {
   it('should create an admin account only when the bootstrap secret matches', async () => {
@@ -62,6 +65,103 @@ describe('AuthService.createAdmin', () => {
   });
 });
 
+describe('AuthService.register', () => {
+  const registration = {
+    email: 'student@example.com',
+    password: 'SecurePass123!',
+    firstName: 'Amina',
+    lastName: 'Diallo',
+  };
+
+  it('keeps a new student account pending when verification email is unavailable', async () => {
+    const user = {
+      id: 'student-1',
+      email: registration.email,
+      firstName: registration.firstName,
+      lastName: registration.lastName,
+    };
+    let createdAccount:
+      | { email?: string; status?: string; emailVerified?: boolean }
+      | undefined;
+    const prisma = {
+      user: {
+        findUnique: jest.fn().mockResolvedValue(null),
+        create: jest
+          .fn()
+          .mockImplementation(
+            ({
+              data,
+            }: {
+              data: {
+                email?: string;
+                status?: string;
+                emailVerified?: boolean;
+              };
+            }) => {
+              createdAccount = data;
+              return Promise.resolve(user);
+            },
+          ),
+        update: jest.fn().mockResolvedValue(user),
+      },
+    };
+    const mail = {
+      sendVerification: jest
+        .fn()
+        .mockRejectedValue(new Error('SMTP unavailable')),
+    };
+    const service = new AuthService(
+      prisma as unknown as PrismaService,
+      {} as JwtService,
+      mail as unknown as MailService,
+    );
+
+    await expect(service.register(registration)).resolves.toEqual({
+      message:
+        'Compte créé, mais la vérification par email est indisponible. Votre compte est en attente de validation manuelle par l’équipe GPI.',
+    });
+    expect(prisma.user.create).toHaveBeenCalled();
+    expect(createdAccount?.email).toBe(registration.email);
+    expect(createdAccount?.status).toBe('PENDING');
+    expect(createdAccount?.emailVerified).toBe(false);
+    expect(prisma.user.update).toHaveBeenCalledWith({
+      where: { id: user.id },
+      data: {
+        emailVerificationTokenHash: null,
+        emailVerificationExpiresAt: null,
+      },
+    });
+  });
+
+  it('returns the verification instructions when the email is sent', async () => {
+    const user = {
+      id: 'student-1',
+      email: registration.email,
+      firstName: registration.firstName,
+      lastName: registration.lastName,
+    };
+    const prisma = {
+      user: {
+        findUnique: jest.fn().mockResolvedValue(null),
+        create: jest.fn().mockResolvedValue(user),
+        update: jest.fn(),
+      },
+    };
+    const mail = { sendVerification: jest.fn().mockResolvedValue(undefined) };
+    const service = new AuthService(
+      prisma as unknown as PrismaService,
+      {} as JwtService,
+      mail as unknown as MailService,
+    );
+
+    await expect(service.register(registration)).resolves.toEqual({
+      message:
+        'Compte créé. Consultez votre email pour vérifier votre adresse, puis attendez la validation administrative.',
+    });
+    expect(prisma.user.update).not.toHaveBeenCalled();
+  });
+});
+
 describe('AuthService email and password tokens', () => {
   it('stores only the hash of a valid email verification token', async () => {
     const findFirst = jest.fn(
@@ -70,7 +170,7 @@ describe('AuthService email and password tokens', () => {
           emailVerificationTokenHash: string;
           emailVerificationExpiresAt: { gt: Date };
         };
-      }) => {
+      }): Promise<{ id: string }> => {
         void query;
         return Promise.resolve({ id: 'user-1' });
       },
@@ -81,17 +181,23 @@ describe('AuthService email and password tokens', () => {
         update: jest.fn().mockResolvedValue({}),
       },
     };
-    const service = new AuthService(prisma as any, {} as any, {} as any);
+    const service = new AuthService(
+      prisma as unknown as PrismaService,
+      {} as JwtService,
+      {} as MailService,
+    );
 
     await expect(service.verifyEmail('one-time-token')).resolves.toEqual({
       message:
         'Adresse email vérifiée. Votre compte reste en attente de validation administrative.',
     });
-    const query = findFirst.mock.calls[0][0];
-    expect(query.where.emailVerificationTokenHash).toBe(
-      createHash('sha256').update('one-time-token').digest('hex'),
-    );
-    expect(query.where.emailVerificationExpiresAt.gt).toBeInstanceOf(Date);
+    expect(findFirst).toHaveBeenCalledTimes(1);
+    expect(
+      findFirst.mock.calls[0]?.[0].where.emailVerificationTokenHash,
+    ).toBe(createHash('sha256').update('one-time-token').digest('hex'));
+    expect(
+      findFirst.mock.calls[0]?.[0].where.emailVerificationExpiresAt.gt,
+    ).toBeInstanceOf(Date);
     expect(prisma.user.update).toHaveBeenCalledWith(
       expect.objectContaining({
         data: {
@@ -105,7 +211,11 @@ describe('AuthService email and password tokens', () => {
 
   it('rejects an expired or unknown password reset token', async () => {
     const prisma = { user: { findFirst: jest.fn().mockResolvedValue(null) } };
-    const service = new AuthService(prisma as any, {} as any, {} as any);
+    const service = new AuthService(
+      prisma as unknown as PrismaService,
+      {} as JwtService,
+      {} as MailService,
+    );
 
     await expect(
       service.resetPassword('expired-token', 'new-password'),
